@@ -1,0 +1,24 @@
+{
+  "type": "number",
+  "label": {
+    "en": "Dim duration when key pressed (s)",
+    "nl": "Dim duur bij lang indrukken (s)"
+  },
+  "units": {
+    "en": "s",
+    "nl": "s"
+  },
+  "zwave": {
+    "index": 66,
+    "size": 2
+  },
+  "value": 3,
+  "attr": {
+    "min": 1,
+    "max": 255
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines the time it takes to move between the maximum and minimum dim values when the switch connected to input 1 is pressed continuously or when controlled via an associated device.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de tijd die nodig is voor het dimmen van het maximale naar het minimale dim niveau wanneer de schakelaar aangesloten op ingang 1 lang wordt ingedrukt of wanneer aangestuurd via een geassocieerd apparaat."
+  }
+}

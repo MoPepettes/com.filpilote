@@ -1,0 +1,25 @@
+{
+  "type": "number",
+  "label": {
+    "en": "Dim duration",
+    "nl": "Dim duur"
+  },
+  "units": {
+    "en": "s",
+    "nl": "s"
+  },
+  "zwave": {
+    "index": 65,
+    "size": 2
+  },
+  "value": 1,
+  "attr": {
+    "min": 0.5,
+    "max": 2.5,
+    "step": 0.1
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines the time (in seconds) it takes to move between the maximum and minimum dim values when the switch connected to input 1 is clicked shortly or when controlled via Homey.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de tijd (in seconden) die nodig is voor het dimmen van het maximale naar het minimale dim niveau wanneer de schakelaar aangesloten op ingang 1 kort is ingedrukt of wanneer aangestuurd via Homey."
+  }
+}

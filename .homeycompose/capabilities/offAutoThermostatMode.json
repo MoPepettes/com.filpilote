@@ -1,0 +1,24 @@
+{
+  "type": "enum",
+  "title": {
+    "en": "Thermostat mode"
+  },
+  "getable": true,
+  "setable": true,
+  "values": [
+    {
+      "id": "auto",
+      "title": {
+        "en": "Heat/Cool",
+        "nl": "Verwarmen/Verkoelen"
+      }
+    },
+    {
+      "id": "off",
+      "title": {
+        "en": "Off",
+        "nl": "Uit"
+      }
+    }
+  ]
+}

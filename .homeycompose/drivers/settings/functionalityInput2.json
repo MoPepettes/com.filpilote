@@ -1,0 +1,20 @@
+{
+  "type": "number",
+  "label": {
+    "en": "Input 2 functionality",
+    "nl": "Ingang 2 functionaliteit"
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines the target temperature that will be set when input 2 is switched. The target temperature ranges from 0 - 990 (0°C to 99°C) and from 1001 to 1150 (-0.1°C to -15°C). To disable the influence of input 2 on the heating and cooling process set the value to 32767. To let the connected condense sensor influence the heating and cooling process set the value to 2000. To use this input as a Flow Trigger configure this parameter to the value 2000 (use of the connected condensation sensor). Note: if this parameter is set to influence heating and cooling according to the condense sensor then input 2 must be enabled via parameter 101.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de doeltemperatuur die wordt ingesteld wanneer input 2 wordt geschakeld. Het bereik van de doeltemperatuur gaat van 0 - 990 (0°C tot 99°C) en van 1001 tot 1150 (-0.1°C to -15°C). Om de invloed van ingang 2 op het verwarmen en verkoelen uit te schakelen stel deze parameter in op 32767. Om de aangesloten condenssensor het verwarmen en verkoelen te laten beïnvloeden stel deze parameter in op 2000. Om deze ingang als Flow Trigger te gebruiken stel deze parameter in op de waarde 2000 (gebruik van de aangesloten condensatiesensor). Let op: als deze parameter is ingesteld op het beïnvloeden van het verwarmen en verkoelen a.d.h.v. de aangesloten condensatiesensor dan moet ingang 2 ingeschakeld zijn via parameter 101."
+  },
+  "zwave": {
+    "index": 12,
+    "size": 2
+  },
+  "value": 32767,
+  "attr": {
+    "min": 0,
+    "max": 32767
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "All on",
+    "nl": "Alles aan"
+  },
+  "getable": false,
+  "setable": true
+}

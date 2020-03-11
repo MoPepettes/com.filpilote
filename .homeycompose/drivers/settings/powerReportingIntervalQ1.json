@@ -1,0 +1,10 @@
+{
+  "label": {
+    "en": "Power reporting interval for output 1",
+    "nl": "Stroomverbruik report interval uitgang 1"
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) defines the interval in seconds with which the power consumption in Watts of output 1 is reported to Homey. Note: setting this parameter to zero disables reporting based on intervals completely.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt op welk interval (in seconden) een stroomverbruik update van uitgang 1 moet worden verstuurd naar Homey. Let op: het instellen van deze parameter op nul schakelt reports per tijdsinterval volledig uit."
+  }
+}

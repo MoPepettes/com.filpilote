@@ -1,0 +1,24 @@
+{
+  "type": "number",
+  "label": {
+    "en": "Limit switch power consumption threshold",
+    "nl": "Limiet stroomverbruik drempelwaarde"
+  },
+  "units": {
+    "en": "W",
+    "nl": "W"
+  },
+  "zwave": {
+    "index": 76,
+    "size": 1
+  },
+  "value": 30,
+  "attr": {
+    "min": 0,
+    "max": 127
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines the threshold value in Watts after which the device detects that it can not move any higher or lower.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de drempelwaarde in Watts waarna het apparaat detecteert dat er niet verder omhoog of omlaag bewogen kan worden."
+  }
+}

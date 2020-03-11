@@ -1,0 +1,26 @@
+{
+  "type": "number",
+  "label": {
+    "en": "Temperature hysteresis off",
+    "nl": "Temperatuur hysteresis uit"
+  },
+  "units": {
+    "en": "°C",
+    "nl": "°C"
+  },
+  "zwave": {
+    "index": 44,
+    "size": 1,
+    "signed": false
+  },
+  "value": 0.5,
+  "attr": {
+    "min": -12.7,
+    "max": 12.7,
+    "step": 0.1
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) defines the temperature difference between the measured temperature and set point temperature which, when exceeded, will turn the device off.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het temperatuurverschil tussen de gemeten temperatuur en de doeltemperatuur die, wanneer overschreden, het apparaat uitzet."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "type": "dropdown",
+  "label": {
+    "en": "Working mode",
+    "nl": "Modus"
+  },
+  "zwave": {
+    "index": 5,
+    "size": 1
+  },
+  "value": "0",
+  "values": [
+    {
+      "id": "0",
+      "label": {
+        "en": "Dimmer",
+        "nl": "Dimmer"
+      }
+    },
+    {
+      "id": "1",
+      "label": {
+        "en": "Switch",
+        "nl": "Schakelaar"
+      }
+    }
+  ],
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) defines the working mode of the device, if mode is set to \"Switch\" the dimming functionality will be disabled. Note: it is generally advised to leave this parameter unchanged, when changed the device needs to be removed from Homey and re-added after waiting 30 seconds (do not reset the device when removing).",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de modus van het apparaat, als de modus staat ingesteld op \"Schakelaar\" zal de dim functionaliteit niet langer werken. Let op: over het algemeen is het geadviseerd om deze parameter ongewijzigd te laten, na het aanpassen van deze parameter moet het apparaat van Homey worden verwijderd en opnieuw worden toegevoegd na 30 seconden wachten (zet het apparaat niet terug naar fabrieksinstellingen tijdens het verwijderen)."
+  }
+}

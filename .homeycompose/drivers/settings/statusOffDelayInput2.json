@@ -1,0 +1,24 @@
+{
+  "type": "number",
+  "label": {
+    "en": "Delay after switching off input 2",
+    "nl": "Vertraging na uitschakelen ingang 2"
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) specifies the delay which occurs after input 2 is switched off and before the associated action is executed. Note: this parameter is only active if parameter 12 is set to use the condense sensor functionality for input 2.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de vertraging die optreedt nadat ingang 2 is uitgeschakeld en voordat de bijbehorende actie wordt uitgevoerd. Let op: deze parameter is alleen actief wanneer parameter 12 is ingesteld op het gebruik van de condenssensor functionaliteit voor ingang 2."
+  },
+  "zwave": {
+    "index": 73,
+    "size": 2
+  },
+  "units": {
+    "en": "s",
+    "nl": "s"
+  },
+  "value": 0,
+  "attr": {
+    "min": 0,
+    "max": 32000
+  }
+}

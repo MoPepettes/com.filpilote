@@ -1,0 +1,24 @@
+{
+  "type": "number",
+  "label": {
+    "en": "Power reporting interval",
+    "nl": "Stroomverbruik report interval"
+  },
+  "units": {
+    "en": "s",
+    "nl": "s"
+  },
+  "zwave": {
+    "index": 42,
+    "size": 2
+  },
+  "value": 0,
+  "attr": {
+    "min": 0,
+    "max": 32535
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) defines the interval in seconds with which the power consumption in Watts is reported to Homey. Note: setting this parameter to zero disables reporting based on intervals completely.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt op welk interval (in seconden) een stroomverbruik update moet worden verstuurd naar Homey. Let op: het instellen van deze parameter op nul schakelt reports per tijdsinterval volledig uit."
+  }
+}

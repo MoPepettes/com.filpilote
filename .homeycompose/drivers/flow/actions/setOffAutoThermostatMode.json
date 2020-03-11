@@ -1,0 +1,29 @@
+{
+  "$id": "setOffAutoThermostatMode_{{driverId}}",
+  "title": {
+    "en": "Change thermostat mode",
+    "nl": "Stel thermostaat modus in"
+  },
+  "args": [
+    {
+      "name": "mode",
+      "type": "dropdown",
+      "values": [
+        {
+          "id": "auto",
+          "label": {
+            "en": "Auto",
+            "nl": "Auto"
+          }
+        },
+        {
+          "id": "off",
+          "label": {
+            "en": "Off",
+            "nl": "Uit"
+          }
+        }
+      ]
+    }
+  ]
+}

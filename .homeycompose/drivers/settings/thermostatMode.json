@@ -1,0 +1,32 @@
+{
+  "type": "dropdown",
+  "label": {
+    "en": "Thermostat mode",
+    "nl": "Thermostaat modus"
+  },
+  "zwave": {
+    "index": 59,
+    "size": 1
+  },
+  "value": "0",
+  "values": [
+    {
+      "id": "0",
+      "label": {
+        "en": "Heating",
+        "nl": "Verwarmen"
+      }
+    },
+    {
+      "id": "1",
+      "label": {
+        "en": "Cooling",
+        "nl": "Koelen"
+      }
+    }
+  ],
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines the operating mode of the device. Note: when changed the device needs to be removed from Homey and re-added after waiting 30 seconds (do not reset the device when removing).",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de werking van het apparaat. Let op: na het aanpassen van deze parameter moet het apparaat van Homey worden verwijderd en opnieuw worden toegevoegd na 30 seconden wachten (zet het apparaat niet terug naar fabrieksinstellingen tijdens het verwijderen)."
+  }
+}

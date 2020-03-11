@@ -1,0 +1,24 @@
+{
+  "type": "number",
+  "label": {
+    "en": "Delay after switching off input 1",
+    "nl": "Vertraging na uitschakelen ingang 1"
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) specifies the delay which occurs after input 1 is switched off and before the associated action is executed. Note: this parameter is only active if parameter 11 is set to use the window sensor functionality for input 1.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de vertraging die optreedt nadat ingang 1 is uitgeschakeld en voordat de bijbehorende actie wordt uitgevoerd. Let op: deze parameter is alleen actief wanneer parameter 11 is ingesteld op het gebruik van de raamsensor functionaliteit voor ingang 1."
+  },
+  "zwave": {
+    "index": 71,
+    "size": 2
+  },
+  "units": {
+    "en": "s",
+    "nl": "s"
+  },
+  "value": 0,
+  "attr": {
+    "min": 0,
+    "max": 32000
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "number",
+  "label": {
+    "en": "Too high temperature limit",
+    "nl": "Te hoge temperatuur limiet"
+  },
+  "units": {
+    "en": "°C",
+    "nl": "°C"
+  },
+  "zwave": {
+    "index": 61,
+    "size": 2
+  },
+  "value": 70,
+  "attr": {
+    "min": 1,
+    "max": 100,
+    "step": 0.1
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines the temperature value above which the temperature is considered too high.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de waarde waarboven de temperatuur als te hoog wordt beschouwd."
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$id": "inputThreeTurnedOn_{{driverId}}",
+  "title": {
+    "en": "Input 3 turned on",
+    "nl": "Ingang 3 is ingeschakeld"
+  },
+  "hint": {
+    "en": "This Flow Trigger is only active if input 3 is enabled on the device, please see the device settings for more information.",
+    "nl": "Deze Flow Trigger werkt alleen wanneer ingang 3 is geactiveerd op het apparaat, zie de apparaatinstellingen voor meer informatie."
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "type": "dropdown",
+  "label": {
+    "en": "Input 1 notification type and event",
+    "nl": "Ingang 1 notificatie type en event"
+  },
+  "zwave": {
+    "index": 100,
+    "size": 1
+  },
+  "value": "0",
+  "values": [
+    {
+      "id": "0",
+      "label": {
+        "en": "Disabled",
+        "nl": "Uitgeschakeld"
+      }
+    },
+    {
+      "id": "1",
+      "label": {
+        "en": "Home Security; Motion Detection, unknown location",
+        "nl": "Huis Beveiliging; Bewegings Detectie, onbekende locatie"
+      }
+    },
+    {
+      "id": "2",
+      "label": {
+        "en": "CO; Carbon Monoxide detected, unknown location",
+        "nl": "CO; koolstofmonoxide gedetecteerd, onbekende locatie"
+      }
+    },
+    {
+      "id": "3",
+      "label": {
+        "en": "CO2; Carbon Dioxide detected, unknown location",
+        "nl": "CO2; koolstofdioxide gedetecteerd, onbekende locatie"
+      }
+    },
+    {
+      "id": "4",
+      "label": {
+        "en": "Water Alarm; Water Leak detected, unknown location",
+        "nl": "Water Alarm; Water Lek gedetecteerd, onbekende locatie"
+      }
+    },
+    {
+      "id": "5",
+      "label": {
+        "en": "Heat Alarm; Overheat detected, unknown location",
+        "nl": "Hitte Alarm; Oververhitting gedetecteerd, onbekende locatie"
+      }
+    },
+    {
+      "id": "6",
+      "label": {
+        "en": "Smoke Alarm; Smoke detected, unknown location",
+        "nl": "Rook Alarm; Rook gedetecteerd, onbekende locatie"
+      }
+    },
+    {
+      "id": "9",
+      "label": {
+        "en": "Sensor binary report",
+        "nl": "Binaire sensor melding"
+      }
+    }
+  ],
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines whether input 1 is enabled and which message should be send to Homey and other associated devices when switched. Note: it is generally advised to leave this parameter unchanged, when changed the device needs to be removed from Homey and re-added after waiting 30 seconds (do not reset the device when removing).",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of ingang 1 is ingeschakeld en welk bericht moet worden verstuurd naar Homey en andere geassocieerde apparaten wanneer geschakeld. Let op: over het algemeen is het geadviseerd om deze parameter ongewijzigd te laten, na het aanpassen van deze parameter moet het apparaat van Homey worden verwijderd en opnieuw worden toegevoegd na 30 seconden wachten (zet het apparaat niet terug naar fabrieksinstellingen tijdens het verwijderen)."
+  }
+}

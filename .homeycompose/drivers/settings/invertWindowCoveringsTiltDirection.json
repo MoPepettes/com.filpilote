@@ -1,0 +1,12 @@
+{
+  "type": "checkbox",
+  "label": {
+    "en": "Invert slats tilt direction",
+    "nl": "Draai lamelrichting om"
+  },
+  "value": false,
+  "hint": {
+    "en": "If this setting is enabled, the slats tilt movement will be inverted.",
+    "nl": "Als deze instelling is geactiveerd wordt de draairichting van de lamellen omgedraait."
+  }
+}

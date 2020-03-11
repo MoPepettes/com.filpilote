@@ -1,0 +1,16 @@
+{
+  "type": "checkbox",
+  "label": {
+    "en": "Enable venetian blind mode",
+    "nl": "Schakel besturing van lamellen in"
+  },
+  "zwave": {
+    "index": 71,
+    "size": 1
+  },
+  "value": false,
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) enables venetian blind mode. Note: after changing this setting the device needs to be removed from Homey and re-added after waiting for 30 seconds (do not reset the device when removing). Check the device manual for more detailed instructions.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) schakelt besturing van lamellen in. Let op: na het wijzigen van deze parameter moet het apparaat worden verwijderd van Homey, vervolgens, na 30 seconden te hebben gewacht, kan het weer worden toegevoegd aan Homey (zet het apparaat niet terug naar fabrieksinstellingen tijdens het verwijderen). Bekijk de handleiding van het apparaat voor gedetailleerde instructies."
+  }
+}

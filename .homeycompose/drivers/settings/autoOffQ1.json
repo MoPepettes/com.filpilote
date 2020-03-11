@@ -1,0 +1,15 @@
+{
+  "type": "number",
+  "label": {
+    "en": "Turn off output 1 automatically",
+    "nl": "Schakel uitgang 1 automatisch uit"
+  },
+  "units": {
+    "en": "s",
+    "nl": "s"
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) defines the time after which output 1 is turned off automatically. Note: setting this parameter to zero will disable automatically turning off.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de tijd waarna uitgang 1 automatisch wordt uitgezet. Let op: het instellen van deze parameter op nul schakelt het automatisch uit gaan uit."
+  }
+}

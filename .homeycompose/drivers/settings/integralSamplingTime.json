@@ -1,0 +1,24 @@
+{
+  "type": "number",
+  "label": {
+    "en": "Integral sampling time",
+    "nl": "Integrale bemonsteringstijd"
+  },
+  "units": {
+    "en": "s",
+    "nl": "s"
+  },
+  "zwave": {
+    "index": 55,
+    "size": 1
+  },
+  "value": 5,
+  "attr": {
+    "min": 0,
+    "max": 127
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) defines the time between samples, on each sample the controller captures difference between SP-act.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) definieert de tijd tussen bemonsteren, bij het bemonsteren neemt de controller het verschil tussen SP-act op."
+  }
+}

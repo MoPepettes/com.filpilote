@@ -1,0 +1,16 @@
+{
+  "type": "checkbox",
+  "label": {
+    "en": "Double click functionality",
+    "nl": "Dubbel klikken functionaliteit"
+  },
+  "zwave": {
+    "index": 21,
+    "size": 1
+  },
+  "value": false,
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines if the double click functionality is enabled; when enabled a quick double click of the connected switch will set the light to the highest dim level. Note: this parameter is only applied if input 1 is configured as a momentary switch.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of de dubbel klikken functionaliteit is ingeschakeld; wanneer ingeschakeld zal een snelle dubbele klik op de aangesloten schakelaar het licht op het hoogste dim niveau instellen. Let op: deze parameter is alleen van toepassing als ingang 1 is ingesteld als pulsdrukschakelaar."
+  }
+}

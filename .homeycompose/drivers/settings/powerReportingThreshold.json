@@ -1,0 +1,24 @@
+{
+  "type": "number",
+  "label": {
+    "en": "Power report on power change",
+    "nl": "Stroomverbruik update bij verandering van"
+  },
+  "units": {
+    "en": "%",
+    "nl": "%"
+  },
+  "zwave": {
+    "index": 40,
+    "size": 1
+  },
+  "value": 10,
+  "attr": {
+    "min": 0,
+    "max": 100
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) defines the relative threshold (percentage) which when exceeded will result in a Watt power consumption report being send to Homey. Note: power consumption needs to change by at least 1 Watt before it can be reported.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de relatieve verandering (in procenten) die overschreden moet worden voordat een Watt stroom consumptie report wordt verstuurd naar Homey. Let op: stroom consumptie report kan pas worden verstuurd nadat de waarde met minimaal 1 Watt is veranderd."
+  }
+}

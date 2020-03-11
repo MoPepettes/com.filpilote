@@ -1,0 +1,21 @@
+{
+  "id": "resetMeter_ZMNHBD1",
+  "title": {
+    "en": "Reset power meter",
+    "nl": "Stel stroomverbuik opnieuw in"
+  },
+  "hint": {
+    "en": "Reset the accumulated power usage (kWh), note that this can not be reversed.",
+    "nl": "Stel geaccumuleerde stroomverbruik (kWh) opnieuw in, dit kan niet worden teruggedraaid."
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": {
+        "driver_id": "ZMNHBD1",
+        "flags": "zwaveMultiChannel"
+      }
+    }
+  ]
+}

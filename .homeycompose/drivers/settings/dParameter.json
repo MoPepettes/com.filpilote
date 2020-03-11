@@ -1,0 +1,16 @@
+{
+  "type": "number",
+  "label": {
+    "en": "D parameter",
+    "nl": "D parameter"
+  },
+  "zwave": {
+    "index": 58,
+    "size": 2
+  },
+  "value": 1,
+  "attr": {
+    "min": 0,
+    "max": 1000
+  }
+}

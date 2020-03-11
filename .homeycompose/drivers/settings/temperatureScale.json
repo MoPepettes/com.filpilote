@@ -1,0 +1,30 @@
+{
+  "type": "dropdown",
+  "label": {
+    "en": "Temperature scale",
+    "nl": "Temperatuurschaal"
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines the temperature scale used by the {{driverNameEn}}. Note: Homey currently only supports the Celsius scale.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de temperatuurschaal die gebruikt wordt door de {{driverNameNl}}. Let op: Homey ondersteunt momenteel alleen de Celsius schaal."
+  },
+  "zwave": {
+    "index": 78,
+    "size": 1
+  },
+  "value": "0",
+  "values": [
+    {
+      "id": "0",
+      "label": {
+        "en": "Celsius"
+      }
+    },
+    {
+      "id": "1",
+      "label": {
+        "en": "Fahrenheit"
+      }
+    }
+  ]
+}

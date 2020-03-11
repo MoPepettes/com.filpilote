@@ -1,0 +1,11 @@
+{
+  "$id": "inputOneToggled_{{driverId}}",
+  "title": {
+    "en": "Input 1 was toggled",
+    "nl": "Ingang 1 is geschakeld"
+  },
+  "hint": {
+    "en": "This Flow Trigger is only active if input 1 is enabled on the device, please see the device settings for more information.",
+    "nl": "Deze Flow Trigger werkt alleen wanneer ingang 1 is geactiveerd op het apparaat, zie de apparaatinstellingen voor meer informatie."
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$id": "inputTwoTurnedOff_{{driverId}}",
+  "title": {
+    "en": "Input 2 turned off",
+    "nl": "Ingang 2 is uitgeschakeld"
+  },
+  "hint": {
+    "en": "This Flow Trigger is only active if input 2 is enabled on the device, please see the device settings for more information.",
+    "nl": "Deze Flow Trigger werkt alleen wanneer ingang 2 is geactiveerd op het apparaat, zie de apparaatinstellingen voor meer informatie."
+  }
+}

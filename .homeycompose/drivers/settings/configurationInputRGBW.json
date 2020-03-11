@@ -1,0 +1,88 @@
+{
+  "label": {
+    "en": "Input configuration",
+    "nl": "Ingang configuratie"
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines the function of the input when it is switched.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de functie van de ingang wanneer deze wordt geschakeld."
+  },
+  "type": "dropdown",
+  "zwave": {
+    "index": 1,
+    "size": 1
+  },
+  "value": "4",
+  "values": [
+    {
+      "id": "1",
+      "label": {
+        "en": "Normal mode - Momentary switch",
+        "nl": "Normale modus - Pulsdrukschakelaar"
+      }
+    },
+    {
+      "id": "2",
+      "label": {
+        "en": "Normal mode - Toggle switch",
+        "nl": "Normale modus - Tuimelschakelaar"
+      }
+    },
+    {
+      "id": "3",
+      "label": {
+        "en": "Normal mode - Toggle switch with memory",
+        "nl": "Normale modus - Tuimelschakelaar met geheugen"
+      }
+    },
+    {
+      "id": "4",
+      "label": {
+        "en": "Brightness mode - Momentary switch",
+        "nl": "Helderheid modus - Pulsdrukschakelaar"
+      }
+    },
+    {
+      "id": "5",
+      "label": {
+        "en": "Brightness mode - Toggle switch",
+        "nl": "Helderheid modus - Tuimelschakelaar"
+      }
+    },
+    {
+      "id": "6",
+      "label": {
+        "en": "Brightness mode - Toggle switch with memory",
+        "nl": "Helderheid modus - Tuimelschakelaar met geheugen"
+      }
+    },
+    {
+      "id": "7",
+      "label": {
+        "en": "Rainbow mode - Momentary switch",
+        "nl": "Regenboog modus - Pulsdrukschakelaar"
+      }
+    },
+    {
+      "id": "8",
+      "label": {
+        "en": "Scene mode - Momentary switch",
+        "nl": "Scene modus - Pulsdrukschakelaar"
+      }
+    },
+    {
+      "id": "9",
+      "label": {
+        "en": "Scene mode - Toggle switch",
+        "nl": "Scene modus - Tuimelschakelaar"
+      }
+    },
+    {
+      "id": "10",
+      "label": {
+        "en": "Scene mode - Toggle switch with memory",
+        "nl": "Scene modus - Tuimelschakelaar met geheugen"
+      }
+    }
+  ]
+}

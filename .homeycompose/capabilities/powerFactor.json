@@ -1,0 +1,16 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Power Factor",
+    "nl": "Power Factor"
+  },
+  "decimals": 2,
+  "chartType": "spline",
+  "desc": {
+    "en": "Power Factor (PF)",
+    "nl": "Power Factor (PF)"
+  },
+  "icon": "/assets/measure_power.svg",
+  "getable": true,
+  "setable": false
+}

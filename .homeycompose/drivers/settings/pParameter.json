@@ -1,0 +1,16 @@
+{
+  "type": "number",
+  "label": {
+    "en": "P parameter",
+    "nl": "P parameter"
+  },
+  "zwave": {
+    "index": 56,
+    "size": 2
+  },
+  "value": 100,
+  "attr": {
+    "min": 0,
+    "max": 1000
+  }
+}

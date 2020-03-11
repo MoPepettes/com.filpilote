@@ -1,0 +1,32 @@
+{
+  "type": "dropdown",
+  "label": {
+    "en": "On/off automatically setting unit",
+    "nl": "Automatisch aan/uit parameter eenheid"
+  },
+  "zwave": {
+    "index": 15,
+    "size": 1
+  },
+  "value": "0",
+  "values": [
+    {
+      "id": "0",
+      "label": {
+        "en": "Seconds",
+        "nl": "Seconden"
+      }
+    },
+    {
+      "id": "1",
+      "label": {
+        "en": "Miliseconds",
+        "nl": "Miliseconden"
+      }
+    }
+  ],
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) defines the unit of time used for the \"Turn on/off automatically\" settings (parameters 11 and 12).",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de tijdseenheid die gebruikt wordt voor de \"Schakel automatisch aan/uit\" instellingen (parameters 11 en 12)."
+  }
+}

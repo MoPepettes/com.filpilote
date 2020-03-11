@@ -1,0 +1,16 @@
+{
+  "type": "checkbox",
+  "label": {
+    "en": "Restore slat position after control through switches",
+    "nl": "Herstel lamel positie na bediening via schakelaars"
+  },
+  "zwave": {
+    "index": 73,
+    "size": 1
+  },
+  "value": true,
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines whether the slat position should be restored to the last know position after the shutters are controlled through the connected switches or push buttons (or when the lower limit switch is triggered). Note: the slat position is always restored to the last know position after being controller via Homey.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of de positie van de lamellen moet worden hersteld naar de laatst bekende positie nadat de jaloezie is bediend via de aangesloten schakelaars (of wanneer de lagere limiet switch is bereikt). Let op: de positie van de lamellen wordt altijd hersteld naar de laatst bekende positie na het bedienen via Homey."
+  }
+}

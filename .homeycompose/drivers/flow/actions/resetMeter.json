@@ -1,0 +1,11 @@
+{
+  "$id": "resetMeter_{{driverId}}",
+  "title": {
+    "en": "Reset power meter",
+    "nl": "Stel stroomverbuik opnieuw in"
+  },
+  "hint": {
+    "en": "Reset the accumulated power usage (kWh), note that this can not be reversed.",
+    "nl": "Stel geaccumuleerde stroomverbruik (kWh) opnieuw in, dit kan niet worden teruggedraaid."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "checkbox",
+  "label": {
+    "en": "Secure inclusion",
+    "nl": "Beveiligde modus"
+  },
+  "zwave": {
+    "index": 250,
+    "size": 1
+  },
+  "value": false,
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines if the device will be included as a secure device during the next inclusion. Note: to use secure inclusion the device needs to be removed from Homey and re-added after waiting 30 seconds (do not reset the device when removing).",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of het apparaat tijdens de volgende inclusie in beveiligde modus wordt toegevoegd. Let op: om gebruik te maken van de beveiligde modus moet het apparaat van Homey worden verwijderd en opnieuw worden toegevoegd na 30 seconden wachten (zet het apparaat niet terug naar fabrieksinstellingen tijdens het verwijderen)."
+  }
+}

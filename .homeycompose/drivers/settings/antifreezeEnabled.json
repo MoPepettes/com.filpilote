@@ -1,0 +1,12 @@
+{
+  "type": "checkbox",
+  "label": {
+    "en": "Antifreeze enabled",
+    "nl": "Vorstbeveiliging ingeschakeld"
+  },
+  "hint": {
+    "en": "This setting enables the antifreeze functionality of the device.",
+    "nl": "Deze instelling schakelt de vorstbeveiliging in."
+  },
+  "value": false
+}

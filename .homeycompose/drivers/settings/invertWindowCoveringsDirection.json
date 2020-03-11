@@ -1,0 +1,12 @@
+{
+  "type": "checkbox",
+  "label": {
+    "en": "Invert shutter movement direction",
+    "nl": "Keer rolluik beweging om"
+  },
+  "value": false,
+  "hint": {
+    "en": "If this setting is enabled, the shutter movement will be inverted.",
+    "nl": "Als deze instelling is geactiveerd wordt de rolluik beweging omgedraait."
+  }
+}

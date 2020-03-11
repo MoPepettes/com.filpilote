@@ -1,0 +1,24 @@
+{
+  "type": "number",
+  "label": {
+    "en": "Dim duration association group 3",
+    "nl": "Dim duur voor associatiegroep 3"
+  },
+  "units": {
+    "en": "s",
+    "nl": "s"
+  },
+  "zwave": {
+    "index": 68,
+    "size": 1
+  },
+  "value": 0,
+  "attr": {
+    "min": 0,
+    "max": 127
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines the dim transition duration time that is send to devices in association group 3.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de duur die wordt verstuurd naar apparaten in associatie groep 3."
+  }
+}

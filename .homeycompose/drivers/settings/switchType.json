@@ -1,0 +1,32 @@
+{
+  "type": "dropdown",
+  "label": {
+    "en": "Switch type",
+    "nl": "Schakelaar type"
+  },
+  "zwave": {
+    "index": 1,
+    "size": 1
+  },
+  "value": "0",
+  "values": [
+    {
+      "id": "0",
+      "label": {
+        "en": "Momentary switch",
+        "nl": "Pulsdrukschakelaar"
+      }
+    },
+    {
+      "id": "1",
+      "label": {
+        "en": "Toggle switch",
+        "nl": "Tuimelschakelaar"
+      }
+    }
+  ],
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines the type of switch connected to the {{driverNameEn}}.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) specificeert het type schakelaar dat is aangesloten op de {{driverNameNl}}."
+  }
+}

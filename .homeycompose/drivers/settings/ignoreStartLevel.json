@@ -1,0 +1,16 @@
+{
+  "type": "checkbox",
+  "label": {
+    "en": "Ignore dim start value",
+    "nl": "Negeer dim start niveau"
+  },
+  "zwave": {
+    "index": 67,
+    "size": 1
+  },
+  "value": false,
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines whether the dim start value should be ignored or respected, when ignored the device will not start dimming from the currently set dim value. Note: this parameter is only relevant if the {{driverNameEn}} is associated to other devices.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of het dim start niveau moet worden genegeerd of gerespecteerd, bij negeren zal het apparaat niet beginnen met dimmen vanaf het op dat moment ingestelde dim niveau. Let op: deze parameter is alleen relevant als de {{driverNameNl}} is geassocieerd met andere apparaten."
+  }
+}

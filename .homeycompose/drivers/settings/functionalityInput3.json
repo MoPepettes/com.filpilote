@@ -1,0 +1,39 @@
+{
+  "type": "dropdown",
+  "label": {
+    "en": "Input 3 functionality",
+    "nl": "Ingang 3 functionaliteit"
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines the functionality of input 3. To use this input as a Flow Trigger configure this parameter to use the floor sensor status. Note: if this parameter is set to influence heating and cooling according to the flood sensor status then input 3 must be enabled via parameter 102, also if this parameter is set to switch the thermostat mode between Heat and Cool it will override parameter 59.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de functionaliteit van ingang 3. Om deze ingang als Flow Trigger te gebruiken configureer deze parameter voor het gebruik van de aangesloten overstromingssensor. Let op: als deze parameter is ingesteld op het beïnvloeden van het verwarmen en verkoelen a.d.h.v. de aangesloten overstromingssensor dan moet ingang 3 ingeschakeld zijn via parameter 102, daarnaast, als deze parameter is ingesteld op het schakelen van de thermostaat modus tussen Verwarmen en Verkoelen wordt parameter 59 genegeerd."
+  },
+  "zwave": {
+    "index": 13,
+    "size": 2
+  },
+  "value": "32767",
+  "values": [
+    {
+      "id": "32767",
+      "label": {
+        "en": "Does not influence heating and cooling",
+        "nl": "Beïnvloed verwarmen en verkoelen niet"
+      }
+    },
+    {
+      "id": "1",
+      "label": {
+        "en": "Switches the thermostat mode between Heat and Cool",
+        "nl": "Schakelt thermostaat modus tussen Verwarmen en Verkoelen"
+      }
+    },
+    {
+      "id": "2",
+      "label": {
+        "en": "Influences heating and cooling according to flood sensor status",
+        "nl": "Beïnvloed verwarmen en verkoelen a.d.h.v. de aangesloten overstromingssensor"
+      }
+    }
+  ]
+}

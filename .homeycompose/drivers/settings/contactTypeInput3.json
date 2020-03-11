@@ -1,0 +1,32 @@
+{
+  "type": "dropdown",
+  "label": {
+    "en": "Contact type input 3",
+    "nl": "Contact type ingang 3"
+  },
+  "zwave": {
+    "index": 4,
+    "size": 1
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) defines the contact type of input 3.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het contact type van ingang 3."
+  },
+  "value": "0",
+  "values": [
+    {
+      "id": "0",
+      "label": {
+        "en": "NO (normally open) input type",
+        "nl": "NO (in rust open) ingang type"
+      }
+    },
+    {
+      "id": "1",
+      "label": {
+        "en": "NC (normally close) input type",
+        "nl": "NC (in rust gesloten) ingang type"
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "label": {
+    "en": "Relay type output 1",
+    "nl": "Relais type uitgang 1"
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) defines the relay type of output 1. Normally open means that the relay delivers power when it is switched off, whereas normally closed means that it will deliver power when it is switched on.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het relais type van uitgang 1. In rust open (NO) betekent dat het relais spanning levert wanneer het is uitgeschakelt, in rust gesloten (NC) betekent dat het spanning levert wanneer het is ingeschakelt."
+  }
+}

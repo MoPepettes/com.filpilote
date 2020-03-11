@@ -1,0 +1,24 @@
+{
+  "type": "number",
+  "label": {
+    "en": "Slats full turn tilting time",
+    "nl": "Kantel tijd van de lamellen"
+  },
+  "units": {
+    "en": "s",
+    "nl": "s"
+  },
+  "zwave": {
+    "index": 72,
+    "size": 2
+  },
+  "value": 1.5,
+  "attr": {
+    "min": 0,
+    "max": 327
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines the time (in seconds) needed to complete full turn tilting. Note: if the set time is too long the shutters will start moving up or down for the remaining time.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de tijd (in seconden) die nodig is voor het volledig kantelen van de lamellen. Let op: als de ingestelde tijd te lang is dan zal de jaloezie omhoog of omlaag bewegen gedurende de resterende tijd."
+  }
+}

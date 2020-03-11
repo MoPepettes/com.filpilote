@@ -1,0 +1,24 @@
+{
+  "type": "number",
+  "label": {
+    "en": "Maximum dimming value (%)",
+    "nl": "Maximale dim niveau (%)"
+  },
+  "units": {
+    "en": "%",
+    "nl": "%"
+  },
+  "zwave": {
+    "index": 61,
+    "size": 1
+  },
+  "value": 99,
+  "attr": {
+    "min": 2,
+    "max": 99
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) defines the highest dim value that can be set. Note: the maximum dim value may not be lower than the minimum dim value.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de hoogste dim waarde die kan worden ingesteld. Let op: de maximale dim waarde mag niet lager zijn dan de minimale dim waarde."
+  }
+}

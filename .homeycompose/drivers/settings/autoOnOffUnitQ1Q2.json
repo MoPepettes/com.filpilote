@@ -1,0 +1,6 @@
+{
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) defines the unit of time used for the \"Turn on/off output 1/2 automatically\" settings (parameters 11, 12, 13 and 14).",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de tijdseenheid die gebruikt wordt voor de \"Schakel uitgang 1/2 automatisch aan/uit\" instellingen (parameters 11, 12, 14 en 14)."
+  }
+}

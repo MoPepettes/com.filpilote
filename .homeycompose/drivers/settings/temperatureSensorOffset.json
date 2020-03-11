@@ -1,0 +1,25 @@
+{
+  "type": "number",
+  "label": {
+    "en": "Temperature sensor calibration",
+    "nl": "Temperatuur sensor kalibratie"
+  },
+  "units": {
+    "en": "°C",
+    "nl": "°C"
+  },
+  "zwave": {
+    "index": 110,
+    "size": 2
+  },
+  "value": 0,
+  "attr": {
+    "min": -10,
+    "max": 10,
+    "step": 0.1
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines the value (°C) that will be added to the measured temperature value for the sake of calibration.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de waarde (°C) die bij de gemeten temperatuur waarde wordt opgeteld om hem te kalibreren."
+  }
+}

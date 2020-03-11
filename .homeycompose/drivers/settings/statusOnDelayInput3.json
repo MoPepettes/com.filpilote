@@ -1,0 +1,24 @@
+{
+  "type": "number",
+  "label": {
+    "en": "Delay after switching on input 3",
+    "nl": "Vertraging na inschakelen ingang 3"
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) specifies the delay which occurs after input 3 is switched on and before the associated action is executed. Note: this parameter is only active if parameter 13 is set to use the flood sensor functionality for input 3.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de vertraging die optreedt nadat ingang 3 is ingeschakeld en voordat de bijbehorende actie wordt uitgevoerd. Let op: deze parameter is alleen actief wanneer parameter 13 is ingesteld op het gebruik van de overstromingssensor functionaliteit voor ingang 3."
+  },
+  "zwave": {
+    "index": 74,
+    "size": 2
+  },
+  "units": {
+    "en": "s",
+    "nl": "s"
+  },
+  "value": 0,
+  "attr": {
+    "min": 0,
+    "max": 32000
+  }
+}

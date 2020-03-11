@@ -1,0 +1,24 @@
+{
+  "type": "number",
+  "label": {
+    "en": "Turn on automatically",
+    "nl": "Schakel automatisch in"
+  },
+  "zwave": {
+    "index": 12,
+    "size": 2
+  },
+  "units": {
+    "en": "s",
+    "nl": "s"
+  },
+  "value": 0,
+  "attr": {
+    "min": 0,
+    "max": 32535
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) defines the time after which the device is turned on automatically. Note: setting this parameter to zero will disable automatically turning on.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de tijd waarna het apparaat zichzelf automatisch aanzet. Let op: het instellen van deze parameter op nul schakelt het automatisch aan gaan uit."
+  }
+}

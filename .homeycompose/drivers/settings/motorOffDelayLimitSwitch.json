@@ -1,0 +1,24 @@
+{
+  "type": "number",
+  "label": {
+    "en": "Delay after reaching limit switch",
+    "nl": "Vertraging na bereiken limiet"
+  },
+  "units": {
+    "en": "s",
+    "nl": "s"
+  },
+  "zwave": {
+    "index": 86,
+    "size": 1
+  },
+  "value": 0.8,
+  "attr": {
+    "min": 0.3,
+    "max": 5
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines the delay (in seconds), after the power consumption has dropped below the value specified in parameter 76, before the motor is turned off.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de vertraging (in seconden), nadat het stroomverbruik is afgenomen tot onder de in parameter 76 ingestelde drempelwaarde, voordat de motor wordt uitgeschakelt."
+  }
+}

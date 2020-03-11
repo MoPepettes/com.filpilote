@@ -1,0 +1,24 @@
+{
+  "type": "number",
+  "label": {
+    "en": "Reporting interval association groups 2 and 10",
+    "nl": "Reporting interval associatiegroepen 2 en 10"
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines the interval at which association groups 2 and 10 report their state.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de interval waarop associatiegroepen 2 en 10 hun status rapporteren."
+  },
+  "zwave": {
+    "index": 76,
+    "size": 1
+  },
+  "units": {
+    "en": "min",
+    "nl": "min"
+  },
+  "value": 30,
+  "attr": {
+    "min": 0,
+    "max": 127
+  }
+}

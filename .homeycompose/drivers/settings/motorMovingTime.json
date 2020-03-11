@@ -1,0 +1,24 @@
+{
+  "type": "number",
+  "label": {
+    "en": "Up/down moving time of motor",
+    "nl": "Omhoog/omlaag bewegingstijd van motor"
+  },
+  "units": {
+    "en": "s",
+    "nl": "s"
+  },
+  "zwave": {
+    "index": 74,
+    "size": 2
+  },
+  "value": 0,
+  "attr": {
+    "min": 0,
+    "max": 3276
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines the time needed to completely open or close the shutters. Note: it is important that the reference position used for determining the moving time of the motor is when the shutter is at its lowest position. Check the device manual for detailed calibration instructions.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de tijd die nodig is voor het volledig openen of sluiten van de jalozieën. Let op: het is belangrijk dat de jaloezieën zich op hun laagste punt bevinden bij het bepalen van de motor bewegingstijd. Bekijk de handleiding van het apparaat voor gedetailleerde instructies."
+  }
+}

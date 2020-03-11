@@ -1,0 +1,16 @@
+{
+  "type": "checkbox",
+  "label": {
+    "en": "Restore light state after power failure",
+    "nl": "Herstel licht status na stroomonderbreking"
+  },
+  "zwave": {
+    "index": 30,
+    "size": 1
+  },
+  "value": true,
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines whether after a power failure the light should be restored to the state it had before the power failure, else it will remain turned off.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of het licht na een stroomonderbreking moet worden ingesteld zoals deze voor de stroomonderbreking stond ingesteld, anders blijft hij uitgeschakelt."
+  }
+}

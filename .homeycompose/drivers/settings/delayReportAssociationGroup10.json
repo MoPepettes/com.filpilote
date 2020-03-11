@@ -1,0 +1,24 @@
+{
+  "type": "number",
+  "label": {
+    "en": "Reporting delay association group 10",
+    "nl": "Reporting vertraging associatiegroep 10"
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines the delay before a report is send to association group 10.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de vertraging die optreedt voordat associatiegroep 10 een status update verstuurd."
+  },
+  "zwave": {
+    "index": 77,
+    "size": 2
+  },
+  "units": {
+    "en": "s",
+    "nl": "s"
+  },
+  "value": 180,
+  "attr": {
+    "min": 0,
+    "max": 32767
+  }
+}

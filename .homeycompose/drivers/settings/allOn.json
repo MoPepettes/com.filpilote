@@ -1,0 +1,12 @@
+{
+  "type": "checkbox",
+  "label": {
+    "en": "Turn on when 'all on' command is received",
+    "nl": "Gaat aan bij ontvangen 'alles aan' commando"
+  },
+  "hint": {
+    "en": "This parameter (10) determines the action of the device in response to receiving a 'all on' command from Homey or another controller.",
+    "nl": "Deze parameter (10) bepaalt de actie van het apparaat bij het ontvangen van een 'alles aan' commando van Homey of een andere controller."
+  },
+  "value": true
+}

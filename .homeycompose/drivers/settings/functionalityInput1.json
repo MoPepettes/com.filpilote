@@ -1,0 +1,39 @@
+{
+  "type": "dropdown",
+  "label": {
+    "en": "Input 1 functionality",
+    "nl": "Ingang 1 functionaliteit"
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) determines the functionality of input 1. To use this input as a Flow Trigger configure this parameter to use the window sensor status. Note: if this parameter is set to influence heating and cooling according to the window sensor status then input 1 must be enabled via parameter 100.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de functionaliteit van ingang 1. Om deze ingang als Flow Trigger te gebruiken configureer deze parameter voor het gebruik van de aangesloten raamsensor. Let op: als deze parameter is ingesteld op het beïnvloeden van het verwarmen en verkoelen a.d.h.v. de aangesloten raamsensor dan moet ingang 1 ingeschakeld zijn via parameter 100."
+  },
+  "zwave": {
+    "index": 11,
+    "size": 2
+  },
+  "value": "1",
+  "values": [
+    {
+      "id": "32767",
+      "label": {
+        "en": "Does not influence heating and cooling",
+        "nl": "Beïnvloed verwarmen en verkoelen niet"
+      }
+    },
+    {
+      "id": "1",
+      "label": {
+        "en": "Switches the thermostat mode between Off and Auto",
+        "nl": "Schakelt thermostaat modus tussen Uit en Auto"
+      }
+    },
+    {
+      "id": "2",
+      "label": {
+        "en": "Influences heating and cooling according to window sensor status",
+        "nl": "Beïnvloed verwarmen en verkoelen a.d.h.v. de aangesloten raamsensor"
+      }
+    }
+  ]
+}

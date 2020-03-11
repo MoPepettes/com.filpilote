@@ -1,0 +1,25 @@
+{
+  "type": "number",
+  "label": {
+    "en": "Temperature report threshold",
+    "nl": "Temperatuur report drempelwaarde"
+  },
+  "units": {
+    "en": "°C",
+    "nl": "°C"
+  },
+  "zwave": {
+    "index": 120,
+    "size": 1
+  },
+  "value": 0.5,
+  "attr": {
+    "min": 0,
+    "max": 12.7,
+    "step": 0.1
+  },
+  "hint": {
+    "en": "This parameter ({{zwaveParameterIndex}}) defines the threshold (°C) which when exceeded will result in a temperature report being send to Homey. Note: setting this parameter to zero disables temperature reports completely.",
+    "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de verandering (°C) die overschreden moet worden voordat een temperatuur report wordt verstuurd naar Homey. Let op: het instellen van deze parameter op nul schakelt temperatuur reports volledig uit."
+  }
+}
