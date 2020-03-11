@@ -1,0 +1,15 @@
+{
+  "error": {
+    "dim_mode_not_enabled": "Dimming is disabled for this device.",
+    "venetian_mode_not_enabled": "Venetian blind mode is not enabled.",
+    "missing_multi_channel_command_class": "Something went wrong during the inclusion of this device, please try to re-pair.",
+    "max_dim_level_cannot_be_lower_than_min_dim_level": "The maximum dimming value cannot be lower than the minimum dimming value."
+  },
+  "settings": {
+    "re_pair_required": "Device settings have been saved, re-pairing (without resetting) the device to Homey is required to activate the setting. Wait 30 seconds after removing before re-pairing.",
+    "power_reporting_value_too_low": "The value for \"Power reporting interval\" should be zero or higher than 30."
+  },
+  "pairing": {
+    "configuring": "Configuring..."
+  }
+}

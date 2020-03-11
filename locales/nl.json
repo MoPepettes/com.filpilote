@@ -1,0 +1,15 @@
+{
+  "error": {
+    "dim_mode_not_enabled": "Dimmen is uitgeschakeld voor dit apparaat.",
+    "venetian_mode_not_enabled": "Jaloezie modus is niet geactiveerd.",
+    "missing_multi_channel_command_class": "Er is iets fout gegaan tijdens het toevoegen van dit apparaat, probeer het opnieuw toe te voegen.",
+    "max_dim_level_cannot_be_lower_than_min_dim_level": "Het maximale dim niveau mag niet lager zijn dan het minimale dim niveau."
+  },
+  "settings": {
+    "re_pair_required": "Apparaatinstellingen bijgewerkt, het apparaat moet opnieuw worden toegevoegd aan Homey om gebruik te maken van de nieuwe instellingen. Wacht 30 seconden na het verwijderen voor het opnieuw toevoegen.",
+    "power_reporting_value_too_low": "De waarde van \"Stroomverbruik report interval\" moet nul zijn of hoger dan 30."
+  },
+  "pairing": {
+    "configuring": "Configureren..."
+  }
+}
