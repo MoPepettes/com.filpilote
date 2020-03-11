@@ -1,0 +1,165 @@
+[
+  {
+    "$extends": "allOn"
+  },
+  {
+    "$extends": "allOff"
+  },
+  {
+    "$extends": "autoOff"
+  },
+  {
+    "$extends": "autoOn"
+  },
+  {
+    "$extends": "restoreStatus"
+  },
+  {
+    "id": "reportAfterSet",
+    "type": "checkbox",
+    "label": {
+      "en": "Send report to Homey after received set command",
+      "nl": "Verstuur update naar Homey na ontvangen set commando"
+    },
+    "zwave": {
+      "index": 249,
+      "size": 1
+    },
+    "value": true,
+    "hint": {
+      "en": "This parameter (249) determines whether the {{driverNameEn}} should send a report to Homey after it received a set command. Note: it is generally advised to leave this parameter unchanged.",
+      "nl": "Deze parameter (249) bepaalt of de {{driverNameNl}} na het ontvangen van een set commando een update naar Homey moet sturen met de nieuw ingestelde waarde. Let op: over het algemeen is het geadviseerd om deze parameter ongewijzigd te laten."
+    }
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Inputs",
+      "nl": "Ingangen"
+    },
+    "children": [
+      {
+        "$extends": "switchTypeInput1"
+      },
+      {
+        "$extends": "switchTypeInput2"
+      },
+      {
+        "$extends": "contactTypeInput2"
+      },
+      {
+        "$extends": "contactTypeInput3"
+      },
+      {
+        "id": "additionalDimSwitch",
+        "type": "dropdown",
+        "label": {
+          "en": "Configure additional switch",
+          "nl": "Configureer extra schakelaar"
+        },
+        "zwave": {
+          "index": 20,
+          "size": 1
+        },
+        "value": "0",
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Single push-button or switch (input 1)",
+              "nl": "Enkele schakelaar of drukknop (ingang 1)"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "Three-way switch (input 1 and 2)",
+              "nl": "Wisselschakeling (ingang 1 en 2)"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "Additional switch (input 2)",
+              "nl": "Extra schakelaar (ingang 2)"
+            }
+          }
+        ],
+        "hint": {
+          "en": "This parameter (20) enables the configuration of an additional switch which can be used to control the connected light.",
+          "nl": "Deze parameter (20) kan gebruikt worden om een extra schakelaar te activeren die gebruikt kan worden voor het aansturen van het licht."
+        }
+      },
+      {
+        "$extends": "doubleClick"
+      },
+      {
+        "$extends": "enableInput2"
+      },
+      {
+        "$extends": "enableInput3"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Dimming",
+      "nl": "Dimmen"
+    },
+    "children": [
+      {
+        "$extends": "minimumDimValue"
+      },
+      {
+        "$extends": "maximumDimValue"
+      },
+      {
+        "$extends": "dimDuration"
+      },
+      {
+        "$extends": "dimDurationKeyPressed"
+      },
+      {
+        "$extends": "ignoreStartLevel"
+      },
+      {
+        "$extends": "dimDurationAssociated"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Power reporting",
+      "nl": "Stroomverbruik"
+    },
+    "children": [
+      {
+        "$extends": "powerReportingThreshold"
+      },
+      {
+        "$extends": "powerReportingInterval"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Temperature reporting",
+      "nl": "Temperatuur metingen"
+    },
+    "children": [
+      {
+        "$extends": "temperatureSensorOffset"
+      },
+      {
+        "$extends": "temperatureSensorReportingThreshold",
+        "zwave": {
+          "index": 120,
+          "size": 2
+        }
+      }
+    ]
+  }
+]

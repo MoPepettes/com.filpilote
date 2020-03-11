@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="960px" height="960px" viewBox="0 0 960 960" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>drivers/ZMNHHD/assets/learnmode</title>
+    <desc>Created with Sketch.</desc>
+    <style type="text/css">
+    	.pair {
+    		animation: pair 10s infinite;
+    	}
+    	
+    	@keyframes pair {
+    		0%, 15%, 25%, 40%, 100% {
+    			fill: rgba(255,255,255,0);
+    		}
+    		10%, 20%, 30% {
+    			fill: #0078CC;
+    		}
+    	}
+    	
+		.feedback {
+    		animation: feedback 10s infinite;
+    	}
+    	
+    	@keyframes feedback {
+    		0%, 45%, 55%, 65%, 85%, 100% {
+    			fill: rgba(255,255,255,0);
+    		}
+    		50%, 60%, 70% {
+    			fill: #0078CC;
+    		}
+    	}
+    </style>
+    <g id="drivers/ZMNHHD/assets/learnmode" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M838,28.5 C853.187831,28.5 865.5,40.8121694 865.5,56 L865.5,883.991424 L807.022779,942.5 L152.98218,942.5 L94.5,883.985384 L94.5,56 C94.5,40.8121694 106.812169,28.5 122,28.5 L838,28.5 Z" id="Combined-Shape" stroke="#000000" stroke-width="15" stroke-linecap="square" stroke-linejoin="round"></path>
+        <polyline id="Path" stroke="#000000" stroke-width="7.5" stroke-linejoin="round" points="604 808.277311 648.592593 808.277311 648.592593 769 772 769 772 769 772 892 648.592593 892 648.592593 852.722689 604 852.722689"></polyline>
+        <path d="M773,555 L821,555 L821,862 C821,878.568542 807.568542,892 791,892 L773,892 L773,892 L773,555 Z" id="Rectangle" stroke="#000000" stroke-width="7.5" fill="#000000" stroke-linejoin="round"></path>
+        <g id="Group" transform="translate(786.000000, 569.000000)" fill="#0074CC">
+            <circle class="feedback" id="Oval" cx="11" cy="11" r="11"></circle>
+            <circle class="feedback" id="Oval-Copy-2" cx="11" cy="73" r="11"></circle>
+            <circle class="feedback" id="Oval-Copy" cx="11" cy="42" r="11"></circle>
+            <circle class="feedback" id="Oval-Copy-3" cx="11" cy="105" r="11"></circle>
+            <circle class="feedback" id="Oval-Copy-3" cx="11" cy="136" r="11"></circle>
+            <circle class="feedback" id="Oval" cx="11" cy="167" r="11"></circle>
+            <circle class="feedback" id="Oval-Copy-2" cx="11" cy="230" r="11"></circle>
+            <circle class="feedback" id="Oval-Copy" cx="11" cy="198" r="11"></circle>
+            <circle class="feedback" id="Oval-Copy-3" cx="11" cy="261" r="11"></circle>
+            <circle class="feedback" id="Oval-Copy-3" cx="11" cy="292" r="11"></circle>
+        </g>
+        <path class="pair" d="M754,780 C758.418278,780 762,783.581722 762,788 L762,873 C762,877.418278 758.418278,881 754,881 L667,881 C662.581722,881 659,877.418278 659,873 L659,843 L620,843 C618.895431,843 618,842.104569 618,841 L618,823 C618,821.895431 618.895431,821 620,821 L659,821 L659,788 C659,783.581722 662.581722,780 667,780 L754,780 Z" id="Combined-Shape" fill="#0074CC"></path>
+    </g>
+</svg>

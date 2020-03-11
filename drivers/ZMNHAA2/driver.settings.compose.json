@@ -1,0 +1,76 @@
+[
+  {
+    "$extends": "allOn"
+  },
+  {
+    "$extends": "allOff"
+  },
+  {
+    "$extends": "autoOff",
+    "zwave": {
+      "index": 11,
+      "size": 2,
+      "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 655
+    }
+  },
+  {
+    "$extends": "restoreStatus"
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Inputs",
+      "nl": "Ingangen"
+    },
+    "children": [
+      {
+        "$extends": "switchTypeInput1",
+        "value": "1"
+      },
+      {
+        "$extends": "contactTypeInput2",
+        "zwave": {
+          "index": 2,
+          "size": 1
+        }
+      },
+      {
+        "$extends": "contactTypeInput3",
+        "zwave": {
+          "index": 3,
+          "size": 1
+        }
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Power reporting",
+      "nl": "Stroomverbruik"
+    },
+    "children": [
+      {
+        "$extends": "powerReportingThreshold",
+        "value": 3
+      },
+      {
+        "$extends": "powerReportingInterval",
+        "value": 300,
+        "zwave": {
+          "index": 42,
+          "size": 2,
+          "signed": false
+        },
+        "attr": {
+          "min": 0,
+          "max": 65535
+        }
+      }
+    ]
+  }
+]

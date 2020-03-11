@@ -1,0 +1,83 @@
+[
+  {
+    "$extends": "switchType"
+  },
+  {
+    "$extends": "autoOff"
+  },
+  {
+    "$extends": "autoOn"
+  },
+  {
+    "$extends": "restoreStatus"
+  },
+  {
+    "$extends": "workingMode"
+  },
+  {
+    "$extends": "doubleClick"
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Dimming",
+      "nl": "Dimmen"
+    },
+    "children": [
+      {
+        "$extends": "minimumDimValue",
+        "value": 0
+      },
+      {
+        "$extends": "maximumDimValue"
+      },
+      {
+        "$extends": "dimDuration",
+        "zwave": {
+          "index": 65,
+          "size": 1
+        },
+        "attr": {
+          "min": 1,
+          "max": 127
+        }
+      },
+      {
+        "$extends": "dimDurationKeyPressed",
+        "attr": {
+          "min": 1,
+          "max": 7560
+        }
+      },
+      {
+        "$extends": "dimDurationAssociated"
+      },
+      {
+        "$extends": "ignoreStartLevel"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Power reporting",
+      "nl": "Stroomverbruik"
+    },
+    "children": [
+      {
+        "$extends": "powerReportingThreshold",
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) defines the relative threshold (percentage) which when exceeded will result in a Watt power consumption report being send to Homey. Note: power consumption needs to change by at least 2 Watt before it can be reported.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de relatieve verandering (in procenten) die overschreden moet worden voordat een Watt stroom consumptie report wordt verstuurd naar Homey. Let op: stroom consumptie report kan pas worden verstuurd nadat de waarde met minimaal 2 Watt is veranderd."
+        }
+      },
+      {
+        "$extends": "powerReportingInterval",
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) defines the interval in seconds with which the power consumption in Watts is reported to Homey. Values from 1 to 29 are ignored to prevent network overload. Reports will only be send if there was a change compared to the last report. Note: setting this parameter to zero disables reporting based on intervals completely.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt op welk interval (in seconden) een stroomverbruik update moet worden verstuurd naar Homey. Waarden van 1 tot 29 worden genegeerd om het netwerk niet te overbelasten. Reports worden alleen verstuurd als er een verschil is in gemeten waarde. Let op: het instellen van deze parameter op nul schakelt reports per tijdsinterval volledig uit."
+        }
+      }
+    ]
+  }
+]

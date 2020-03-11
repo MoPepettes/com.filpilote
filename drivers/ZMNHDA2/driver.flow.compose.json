@@ -1,0 +1,37 @@
+{
+  "triggers": [
+    {
+      "$extends": "inputTwoTurnedOn",
+      "$id": "ZMNHDA2_I2_on",
+      "hint": null
+    },
+    {
+      "$extends": "inputTwoTurnedOff",
+      "$id": "ZMNHDA2_I2_off",
+      "hint": null
+    },
+    {
+      "$extends": "inputTwoToggled",
+      "hint": null
+    },
+    {
+      "$extends": "inputThreeTurnedOn",
+      "$id": "ZMNHDA2_I3_on",
+      "hint": null
+    },
+    {
+      "$extends": "inputThreeTurnedOff",
+      "$id": "ZMNHDA2_I3_off",
+      "hint": null
+    },
+    {
+      "$extends": "inputThreeToggled",
+      "hint": null
+    }
+  ],
+  "actions": [
+    {
+      "$extends": "resetMeter"
+    }
+  ]
+}

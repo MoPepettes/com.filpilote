@@ -1,0 +1,87 @@
+[
+  {
+    "$extends": "allOn"
+  },
+  {
+    "$extends": "allOff"
+  },
+  {
+    "$extends": ["autoOff", "autoOffQ1"]
+  },
+  {
+    "$extends": ["autoOn", "autoOnQ1"]
+  },
+  {
+    "$extends": ["autoOff", "autoOffQ2"]
+  },
+  {
+    "$extends": ["autoOn", "autoOnQ2"]
+  },
+  {
+    "$extends": ["autoOnOffUnit", "autoOnOffUnitQ1Q2"]
+  },
+  {
+    "$extends": "restoreStatus"
+  },
+  {
+    "$extends": ["relayType", "relayTypeQ1"]
+  },
+  {
+    "$extends": ["relayType", "relayTypeQ2"]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Inputs",
+      "nl": "Ingangen"
+    },
+    "children": [
+      {
+        "$extends": "switchTypeInput1",
+        "value": "1"
+      },
+      {
+        "$extends": "switchTypeInput2",
+        "value": "1"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Power reporting",
+      "nl": "Stroomverbruik"
+    },
+    "children": [
+      {
+        "$extends": ["powerReportingThreshold", "powerReportingThresholdQ1"]
+      },
+      {
+        "$extends": ["powerReportingInterval", "powerReportingIntervalQ1"],
+        "value": 300
+      },
+      {
+        "$extends": ["powerReportingThreshold", "powerReportingThresholdQ2"]
+      },
+      {
+        "$extends": ["powerReportingInterval", "powerReportingIntervalQ2"],
+        "value": 300
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Temperature reporting",
+      "nl": "Temperatuur metingen"
+    },
+    "children": [
+      {
+        "$extends": "temperatureSensorOffset"
+      },
+      {
+        "$extends": "temperatureSensorReportingThreshold"
+      }
+    ]
+  }
+]

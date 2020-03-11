@@ -1,0 +1,75 @@
+[
+  {
+    "$extends": "allOn"
+  },
+  {
+    "$extends": "allOff"
+  },
+  {
+    "$extends": "restoreStatus"
+  },
+  {
+    "$extends": "switchTypeInput1"
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Inputs",
+      "nl": "Ingangen"
+    },
+    "children": [
+      {
+        "$extends": "contactTypeInput2",
+        "zwave": {
+          "index": 2,
+          "size": 1
+        }
+      },
+      {
+        "$extends": "contactTypeInput3",
+        "zwave": {
+          "index": 3,
+          "size": 1
+        }
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Dimming",
+      "nl": "Dimmen"
+    },
+    "children": [
+      {
+        "$extends": "minimumDimValue"
+      },
+      {
+        "$extends": "maximumDimValue"
+      },
+      {
+        "$extends": "dimDuration"
+      },
+      {
+        "$extends": "dimDurationKeyPressed"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Power reporting",
+      "nl": "Stroomverbruik"
+    },
+    "children": [
+      {
+        "$extends": "powerReportingThreshold",
+        "value": 5
+      },
+      {
+        "$extends": "powerReportingInterval",
+        "value": 300
+      }
+    ]
+  }
+]

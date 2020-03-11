@@ -1,0 +1,95 @@
+[
+  {
+    "$extends": "allOn"
+  },
+  {
+    "$extends": "allOff"
+  },
+  {
+    "$extends": "restoreStatus"
+  },
+  {
+    "$extends": ["autoOff", "autoOffQ1"],
+    "zwave": {
+      "index": 11,
+      "size": 2,
+      "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 655
+    }
+  },
+  {
+    "$extends": ["autoOff", "autoOffQ2"],
+    "zwave": {
+      "index": 12,
+      "size": 2,
+      "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 655
+    }
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Inputs",
+      "nl": "Ingangen"
+    },
+    "children": [
+      {
+        "$extends": "switchTypeInput1",
+        "value": "1"
+      },
+      {
+        "$extends": "switchTypeInput2",
+        "value": "1"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Power reporting",
+      "nl": "Stroomverbruik"
+    },
+    "children": [
+      {
+        "$extends": ["powerReportingThreshold", "powerReportingThresholdQ1"],
+        "value": 1
+      },
+      {
+        "$extends": ["powerReportingThreshold", "powerReportingThresholdQ2"],
+        "value": 1
+      },
+      {
+        "$extends": ["powerReportingInterval", "powerReportingIntervalQ1"],
+        "value": 300,
+        "zwave": {
+          "index": 42,
+          "size": 2,
+          "signed": false
+        },
+        "attr": {
+          "min": 0,
+          "max": 65535
+        }
+      },
+      {
+        "$extends": ["powerReportingInterval", "powerReportingIntervalQ2"],
+        "value": 300,
+        "zwave": {
+          "index": 43,
+          "size": 2,
+          "signed": false
+        },
+        "attr": {
+          "min": 0,
+          "max": 65535
+        }
+      }
+    ]
+  }
+]

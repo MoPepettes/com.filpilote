@@ -1,0 +1,52 @@
+{
+  "name": {
+    "en": "Flush 1 Relay (ZMNHAD)"
+  },
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "class": "socket",
+  "capabilities": [
+    "measure_power",
+    "meter_power",
+    "measure_temperature",
+    "onoff",        
+    "button.reset_meter"
+  ],
+  "capabilitiesOptions": {
+    "button.reset_meter": {
+      "maintenanceAction": true,
+      "title": {
+        "en": "Reset power meter",
+        "nl": "Stel stroomverbuik opnieuw in"
+      },
+      "desc": {
+        "en": "Reset the accumulated power usage (kWh), note that this can not be reversed.",
+        "nl": "Stel geaccumuleerde stroomverbruik (kWh) opnieuw in, dit kan niet worden teruggedraaid."
+      }
+    }
+  },
+  "zwave": {
+    "manufacturerId": 345,
+    "productTypeId": 2,
+    "productId": 82,
+    "associationGroups": [
+      1
+    ],
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Enable inclusion mode on the {{driverNameEn}} via one of the following methods:\n\n1. Connect the device to the power supply and wait 5 seconds for auto-inclusion to start.\n\n2. Toggle the switch connected to input 1 three times within five seconds.\n\n3. If device is powered by 24V SELV supply: press and hold the S (Service) button between 2 and 6 seconds.",
+        "nl": "Activeer inclusie modus op de {{driverNameNl}} via een van de volgende methoden:\n\n1. Verbind het apparaat met de stroomvoorziening en wacht 5 seconden tot auto-inclusie start.\n\n2. Schakel de schakelaar verbonden aan input 1 drie keer binnen vijf seconden.\n\n3. Als het apparaat is aangesloten op 24V SELV: houd dan 2 tot 6 seconden de S (Service) knop ingedrukt."
+      }
+    },
+    "unlearnmode": {
+      "instruction": {
+        "en": "Enable exclusion mode on the {{driverNameEn}} via one of the following methods:\n\n1. Toggle the switch connected to input 1 three times within five seconds.\n\n2. If device is powered by 24V SELV supply: press and hold the S (Service) button between 2 and 6 seconds.\n\nNote: holding the S button longer than 6 seconds will reset the device completely.",
+        "nl": "Activeer exclusie modus op de {{driverNameNl}} via een van de volgende methoden:\n\n1. Schakel de schakelaar verbonden aan input 1 drie keer binnen vijf seconden.\n\n2. Als het apparaat is aangesloten op 24V SELV: houd dan 2 tot 6 seconden de S (Service) knop ingedrukt.\n\nLet op: wanneer de S knop langer dan 6 seconden wordt ingehouden wordt het apparaat teruggezet naar fabrieksinstellingen."
+      },
+      "image": "{{driverAssetsPath}}/learnmode.svg"
+    }
+  }
+}

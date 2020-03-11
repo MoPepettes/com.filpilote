@@ -1,0 +1,27 @@
+{
+  "triggers": [
+    {
+      "$extends": "inputTwoTurnedOn"
+    },
+    {
+      "$extends": "inputTwoTurnedOff"
+    },
+    {
+      "$extends": "inputTwoToggled"
+    },
+    {
+      "$extends": "inputThreeTurnedOn"
+    },
+    {
+      "$extends": "inputThreeTurnedOff"
+    },
+    {
+      "$extends": "inputThreeToggled"
+    }
+  ],
+  "actions": [
+    {
+      "$extends": "resetMeter"
+    }
+  ]
+}
