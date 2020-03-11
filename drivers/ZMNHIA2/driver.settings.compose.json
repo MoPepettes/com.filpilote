@@ -1,0 +1,182 @@
+[
+  {
+    "$extends": "allOn"
+  },
+  {
+    "$extends": "allOff"
+  },
+  {
+    "$extends": "restoreStatus"
+  },
+  {
+    "$extends": "relayType"
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Inputs",
+      "nl": "Ingangen"
+    },
+    "children": [
+      {
+        "$extends": "switchTypeInput1",
+        "value": "1"
+      },
+      {
+        "$extends": "switchTypeInput2",
+        "value": "1"
+      },
+      {
+        "$extends": "switchTypeInput3",
+        "value": "1"
+      },
+      {
+        "$extends": "contactTypeInput2",
+        "zwave": {
+          "index": 4,
+          "size": 1
+        }
+      },
+      {
+        "$extends": "contactTypeInput3",
+        "zwave": {
+          "index": 5,
+          "size": 1
+        }
+      },
+      {
+        "id": "setpointInput2Enabled",
+        "type": "checkbox",
+        "label": {
+          "en": "Enable changing set point via input 2",
+          "nl": "Stel doeltemperatuur in via ingang 2"
+        },
+        "hint": {
+          "en": "This setting enables setting the target temperature via input 2, when enabled the value of parameter 11 will become the new set point when input 2 is triggered.",
+          "nl": "Deze instelling schakelt het instellen van de doeltemperatuur via ingang 2 in. Als deze instelling is ingeschakeld zal, wanneer ingang 2 wordt geschakeld, de doeltemperatuur worden geactiveerd die is ingesteld via parameter 11."
+        },
+        "value": false
+      },
+      {
+        "id": "setpointInput2",
+        "type": "number",
+        "label": {
+          "en": "Set point set by input 2",
+          "nl": "Doeltemperatuur ingesteld door ingang 2"
+        },
+        "units": {
+          "en": "°C",
+          "nl": "°C"
+        },
+        "zwave": {
+          "index": 11,
+          "size": 2,
+          "signed": false
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the target temperature that will be set when input 2 is switched. Note: make sure this functionality is enabled, see the setting above.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de doeltemperatuur die wordt ingesteld wanneer input 2 wordt geschakeld. Let op: zorg ervoor dat deze functionaliteit is ingeschakeld, zie hiervoor de instelling hier boven."
+        },
+        "value": 20,
+        "attr": {
+          "min": -15,
+          "max": 99,
+          "step": 0.1
+        }
+      },
+      {
+        "id": "setpointInput3Enabled",
+        "type": "checkbox",
+        "label": {
+          "en": "Enable changing set point via input 3",
+          "nl": "Stel doeltemperatuur in via ingang 3"
+        },
+        "hint": {
+          "en": "This setting enables setting the target temperature via input 3, when enabled the value of parameter 12 will become the new set point when input 3 is triggered.",
+          "nl": "Deze instelling schakelt het instellen van de doeltemperatuur via ingang 3 in. Als deze instelling is ingeschakeld zal, wanneer ingang 3 wordt geschakeld, de doeltemperatuur worden geactiveerd die is ingesteld via parameter 12."
+        },
+        "value": false
+      },
+      {
+        "id": "setpointInput3",
+        "type": "number",
+        "label": {
+          "en": "Set point set by input 3",
+          "nl": "Doeltemperatuur ingesteld door ingang 3"
+        },
+        "units": {
+          "en": "°C",
+          "nl": "°C"
+        },
+        "zwave": {
+          "index": 12,
+          "size": 2,
+          "signed": false
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the target temperature that will be set when input 3 is switched. Note: make sure this functionality is enabled, see the setting above.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de doeltemperatuur die wordt ingesteld wanneer input 3 wordt geschakeld. Let op: zorg ervoor dat deze functionaliteit is ingeschakeld, zie hiervoor de instelling hier boven."
+        },
+        "value": 20,
+        "attr": {
+          "min": -15,
+          "max": 99,
+          "step": 0.1
+        }
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Power reporting",
+      "nl": "Stroomverbruik"
+    },
+    "children": [
+      {
+        "$extends": "powerReportingThreshold",
+        "value": 3
+      },
+      {
+        "$extends": "powerReportingInterval",
+        "value": 300,
+        "zwave": {
+          "index": 42,
+          "size": 2,
+          "signed": false
+        },
+        "attr": {
+          "min": 0,
+          "max": 65535
+        }
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Temperature",
+      "nl": "Temperatuur"
+    },
+    "children": [
+      {
+        "$extends": "temperatureHysteresisOn"
+      },
+      {
+        "$extends": "temperatureHysteresisOff"
+      },
+      {
+        "$extends": "antifreezeEnabled"
+      },
+      {
+        "$extends": "antifreeze"
+      },
+      {
+        "$extends": "tooLowTemperatureLimit"
+      },
+      {
+        "$extends": "tooHighTemperatureLimit"
+      }
+    ]
+  }
+]

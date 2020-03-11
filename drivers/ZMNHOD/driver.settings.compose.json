@@ -1,0 +1,97 @@
+[
+  {
+    "$extends": "allOn"
+  },
+  {
+    "$extends": "allOff"
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Roller shutter",
+      "nl": "Rolluik"
+    },
+    "children": [
+      {
+        "$extends": "invertWindowCoveringsDirection"
+      },
+      {
+        "$extends": "motorMovingTime"
+      },
+      {
+        "$extends": "motorOperationDetection",
+        "value": 0.6,
+        "attr": {
+          "min": 0.5,
+          "max": 10
+        }
+      },
+      {
+        "$extends": "delayBetweenMotorMovement"
+      },
+      {
+        "$extends": "motorOffDelayLimitSwitch"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Slats",
+      "nl": "Lamellen"
+    },
+    "children": [
+      {
+        "$extends": "operatingMode"
+      },
+      {
+        "$extends": "invertWindowCoveringsTiltDirection"
+      },
+      {
+        "$extends": "slatsTiltingTime"
+      },
+      {
+        "$extends": "slatsPosition"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Power reporting",
+      "nl": "Stroomverbruik"
+    },
+    "children": [
+      {
+        "$extends": "powerReportingThreshold"
+      },
+      {
+        "$extends": "powerReportingInterval",
+        "value": 300
+      },
+      {
+        "$extends": "powerReportDelayTime",
+        "value": 0.8,
+        "attr": {
+          "min": 0.3,
+          "max": 5
+        }
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Temperature reporting",
+      "nl": "Temperatuur metingen"
+    },
+    "children": [
+      {
+        "$extends": "temperatureSensorOffset"
+      },
+      {
+        "$extends": "temperatureSensorReportingThreshold"
+      }
+    ]
+  }
+]

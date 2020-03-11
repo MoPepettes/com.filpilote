@@ -1,0 +1,65 @@
+[
+  {
+    "$extends": "allOn"
+  },
+  {
+    "$extends": "allOff"
+  },
+  {
+    "$extends": "autoOff"
+  },
+  {
+    "$extends": "autoOn"
+  },
+  {
+    "$extends": "autoOnOffUnit"
+  },
+  {
+    "$extends": "restoreStatus"
+  },
+  {
+    "$extends": "relayType"
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Inputs",
+      "nl": "Ingangen"
+    },
+    "children": [
+      {
+        "$extends": "switchTypeInput1",
+        "value": "1"
+      },
+      {
+        "$extends": "contactTypeInput2",
+        "zwave": {
+          "index": 2,
+          "size": 1
+        },
+        "hint": {
+          "en": "This parameter (2) defines the contact type of input 2.",
+          "nl": "Deze parameter (2) bepaalt het contact type van ingang 2."
+        }
+      },
+      {
+        "$extends": "enableInput2"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Temperature reporting",
+      "nl": "Temperatuur metingen"
+    },
+    "children": [
+      {
+        "$extends": "temperatureSensorOffset"
+      },
+      {
+        "$extends": "temperatureSensorReportingThreshold"
+      }
+    ]
+  }
+]

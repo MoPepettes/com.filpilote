@@ -1,0 +1,57 @@
+{
+  "triggers": [
+    {
+      "$extends": "inputOneTurnedOn",
+      "hint": {
+        "en": "This Flow Trigger is only active if input 1 is enabled on the device, please see the device settings (parameter 100 and 11) for more information. Note: input 1 needs to be switched once before it will report its status correctly.",
+        "nl": "Deze Flow Trigger werkt alleen wanneer ingang 1 is geactiveerd op het apparaat, zie de apparaatinstellingen (parameter 100 en 11) voor meer informatie. Let op: ingang 1 moet een keer worden geschakeld voordat het de correcte status doorgeeft."
+      }
+    },
+    {
+      "$extends": "inputOneTurnedOff",
+      "hint": {
+        "en": "This Flow Trigger is only active if input 1 is enabled on the device, please see the device settings (parameter 100 and 11) for more information. Note: input 1 needs to be switched once before it will report its status correctly.",
+        "nl": "Deze Flow Trigger werkt alleen wanneer ingang 1 is geactiveerd op het apparaat, zie de apparaatinstellingen (parameter 100 en 11) voor meer informatie. Let op: ingang 1 moet een keer worden geschakeld voordat het de correcte status doorgeeft."
+      }
+    },
+    {
+      "$extends": "inputOneToggled",
+      "hint": {
+        "en": "This Flow Trigger is only active if input 1 is enabled on the device, please see the device settings (parameter 100 and 11) for more information. Note: input 1 needs to be switched once before it will report its status correctly.",
+        "nl": "Deze Flow Trigger werkt alleen wanneer ingang 1 is geactiveerd op het apparaat, zie de apparaatinstellingen (parameter 100 en 11) voor meer informatie. Let op: ingang 1 moet een keer worden geschakeld voordat het de correcte status doorgeeft."
+      }
+    },
+    {
+      "$extends": "inputTwoTurnedOn",
+      "hint": {
+        "en": "This Flow Trigger is only active if input 2 is enabled on the device, please see the device settings (parameter 101 and 12) for more information. Note: input 2 needs to be switched once before it will report its status correctly.",
+        "nl": "Deze Flow Trigger werkt alleen wanneer ingang 2 is geactiveerd op het apparaat, zie de apparaatinstellingen (parameter 101 en 12) voor meer informatie. Let op: ingang 2 moet een keer worden geschakeld voordat het de correcte status doorgeeft."
+      }
+    },
+    {
+      "$extends": "inputTwoTurnedOff",
+      "hint": {
+        "en": "This Flow Trigger is only active if input 2 is enabled on the device, please see the device settings (parameter 101 and 12) for more information. Note: input 2 needs to be switched once before it will report its status correctly.",
+        "nl": "Deze Flow Trigger werkt alleen wanneer ingang 2 is geactiveerd op het apparaat, zie de apparaatinstellingen (parameter 101 en 12) voor meer informatie. Let op: ingang 2 moet een keer worden geschakeld voordat het de correcte status doorgeeft."
+      }
+    },
+    {
+      "$extends": "inputTwoToggled",
+      "hint": {
+        "en": "This Flow Trigger is only active if input 2 is enabled on the device, please see the device settings (parameter 101 and 12) for more information. Note: input 2 needs to be switched once before it will report its status correctly.",
+        "nl": "Deze Flow Trigger werkt alleen wanneer ingang 2 is geactiveerd op het apparaat, zie de apparaatinstellingen (parameter 101 en 12) voor meer informatie. Let op: ingang 2 moet een keer worden geschakeld voordat het de correcte status doorgeeft."
+      }
+    },
+    {
+      "$extends": "offAutoThermostatModeChanged"
+    }
+  ],
+  "actions": [
+    {
+      "$extends": "resetMeter"
+    },
+    {
+      "$extends": "setOffAutoThermostatMode"
+    }
+  ]
+}

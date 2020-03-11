@@ -1,0 +1,39 @@
+{
+  "triggers": [
+    {
+      "$extends": "inputTwoTurnedOn",
+      "hint": null
+    },
+    {
+      "$extends": "inputTwoTurnedOff",
+      "hint": null
+    },
+    {
+      "$extends": "inputTwoToggled",
+      "hint": null
+    },
+    {
+      "$extends": "inputThreeTurnedOn",
+      "hint": null
+    },
+    {
+      "$extends": "inputThreeTurnedOff",
+      "hint": null
+    },
+    {
+      "$extends": "inputThreeToggled",
+      "hint": null
+    },
+    {
+      "$extends": "offAutoThermostatModeChanged"
+    }
+  ],
+  "actions": [
+    {
+      "$extends": "resetMeter"
+    },
+    {
+      "$extends": "setOffAutoThermostatMode"
+    }
+  ]
+}

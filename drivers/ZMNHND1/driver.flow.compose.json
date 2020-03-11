@@ -1,0 +1,15 @@
+{
+  "triggers": [
+    {
+      "$extends": "inputTwoTurnedOn",
+      "$id": "ZMNHND1_I2_on"
+    },
+    {
+      "$extends": "inputTwoTurnedOff",
+      "$id": "ZMNHND1_I2_off"
+    },
+    {
+      "$extends": "inputTwoToggled"
+    }
+  ]
+}

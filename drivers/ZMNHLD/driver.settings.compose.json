@@ -1,0 +1,413 @@
+[
+  {
+    "$extends": "allOn"
+  },
+  {
+    "$extends": "allOff"
+  },
+  {
+    "$extends": "relayType"
+  },
+  {
+    "$extends": "associationReportingInterval"
+  },
+  {
+    "$extends": "delayReportAssociationGroup10"
+  },
+  {
+    "id": "pwmMaxValue",
+    "type": "number",
+    "label": {
+      "en": "PWM maximum value",
+      "nl": "PWM maximale waarde"
+    },
+    "units": {
+      "en": "%",
+      "nl": "%"
+    },
+    "zwave": {
+      "index": 50,
+      "size": 1
+    },
+    "value": 100,
+    "attr": {
+      "min": 2,
+      "max": 100
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the maximum PWM value. Note: the maximum level may not be lower than the minimum level (see parameter 51).",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de maximale PWM waarde. Let op: de maximale waarde mag niet lager zijn dan de minimale waarde (zie parameter 51)."
+    }
+  },
+  {
+    "id": "pwmMinValue",
+    "type": "number",
+    "label": {
+      "en": "PWM minimum value",
+      "nl": "PWM minimale waarde"
+    },
+    "units": {
+      "en": "%",
+      "nl": "%"
+    },
+    "zwave": {
+      "index": 51,
+      "size": 1
+    },
+    "value": 0,
+    "attr": {
+      "min": 0,
+      "max": 99
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the minimum PWM value. Note: the minimum level may not be higher than the maximum level (see parameter 50).",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de minimale PWM waarde. Let op: de minimale waarde mag niet hoger zijn dan de maximale waarde (zie parameter 50)."
+    }
+  },
+  {
+    "id": "pwmCycleDuration",
+    "type": "number",
+    "label": {
+      "en": "PWM cycle duration",
+      "nl": "PWM cyclus duur"
+    },
+    "units": {
+      "en": "s",
+      "nl": "s"
+    },
+    "zwave": {
+      "index": 52,
+      "size": 1
+    },
+    "value": 10,
+    "attr": {
+      "min": 5,
+      "max": 127
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the PWM cycle duration. PWM cycle duration defines the summary of all 'on' plus 'off' time periods, for example if output is set to 70% with PWM cycle duration of 20s, output will be 'on' for 14s then 'off' for 6s.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de PWM cyclus duur. PWM cyclus duur is de tijd die nodig is voor alle 'aan' en 'uit' perioden, bijvoorbeeld als de output op 70% staat ingesteld met een PWM cyclus duur van 20s zal de ouput 14s 'aan' zijn en vervolgens 6s 'uit'."
+    }
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Inputs",
+      "nl": "Ingangen"
+    },
+    "children": [
+      {
+        "$extends": "switchTypeInput1",
+        "value": "1"
+      },
+      {
+        "$extends": "switchTypeInput2",
+        "value": "1"
+      },
+      {
+        "$extends": "switchTypeInput3",
+        "value": "1"
+      },
+      {
+        "$extends": "contactTypeInput1",
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) defines the contact type of input 1. Note: this parameter is only active when parameter 11 is set to the value 2.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het contact type van ingang 1. Let op: deze parameter is alleen actief wanneer parameter 11 is ingesteld op de waarde 2."
+        }
+      },
+      {
+        "$extends": "contactTypeInput2",
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) defines the contact type of input 2. Note: this parameter is only active when parameter 12 is set to the value 2000.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het contact type van ingang 2. Let op: deze parameter is alleen actief wanneer parameter 12 is ingesteld op de waarde 200."
+        },
+        "zwave": {
+          "index": 5,
+          "size": 1
+        }
+      },
+      {
+        "$extends": "contactTypeInput3",
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) defines the contact type of input 3. Note: this parameter is only active when parameter 13 is set to the value 2.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het contact type van ingang 3. Let op: deze parameter is alleen actief wanneer parameter 13 is ingesteld op de waarde 2."
+        },
+        "zwave": {
+          "index": 6,
+          "size": 1
+        }
+      },
+      {
+        "$extends": "functionalityInput1"
+      },
+      {
+        "$extends": "functionalityInput2"
+      },
+      {
+        "$extends": "functionalityInput3"
+      },
+      {
+        "$extends": "enableInput1",
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines whether input 1 is enabled and which message should be send to Homey and other associated devices when switched. If input 1 is enabled parameter 11 must be set to influence heating and cooling according to the window sensor status. Note: it is generally advised to leave this parameter unchanged, when changed the device needs te be removed from Homey and re-added after waiting 30 seconds (do not reset the device when removing).",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of ingang 1 is ingeschakeld en welk bericht moet worden verstuurd naar Homey en andere geassocieerde apparaten wanneer geschakeld. Als ingang 1 is ingeschakeld moet parameter 11 zijn ingesteld op het beïnvloeden van het verwarmen en verkoelen a.d.h.v. de aangesloten raamsensor. Let op: over het algemeen is het geadviseerd om deze parameter ongewijzigd te laten, na het aanpassen van deze parameter moet het apparaat van Homey worden verwijderd en opnieuw worden toegevoegd na 30 seconden wachten (zet het apparaat niet terug naar fabrieksinstellingen tijdens het verwijderen)."
+        },
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Disabled",
+              "nl": "Uitgeschakeld"
+            }
+          },
+          {
+            "id": "9",
+            "label": {
+              "en": "Sensor binary report",
+              "nl": "Binaire sensor melding"
+            }
+          }
+        ]
+      },
+      {
+        "$extends": "enableInput2",
+        "zwave": {
+          "index": 101,
+          "size": 1
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines whether input 2 is enabled and which message should be send to Homey and other associated devices when switched. If input 2 is enabled parameter 12 must be set to influence heating and cooling according to the condense sensor. Note: it is generally advised to leave this parameter unchanged, when changed the device needs te be removed from Homey and re-added after waiting 30 seconds (do not reset the device when removing).",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of ingang 2 is ingeschakeld en welk bericht moet worden verstuurd naar Homey en andere geassocieerde apparaten wanneer geschakeld. Als ingang 2 is ingeschakeld moet parameter 12 zijn ingesteld op het beïnvloeden van het verwarmen en verkoelen a.d.h.v. de aangesloten condensatiesensor. Let op: over het algemeen is het geadviseerd om deze parameter ongewijzigd te laten, na het aanpassen van deze parameter moet het apparaat van Homey worden verwijderd en opnieuw worden toegevoegd na 30 seconden wachten (zet het apparaat niet terug naar fabrieksinstellingen tijdens het verwijderen)."
+        },
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Disabled",
+              "nl": "Uitgeschakeld"
+            }
+          },
+          {
+            "id": "9",
+            "label": {
+              "en": "Sensor binary report",
+              "nl": "Binaire sensor melding"
+            }
+          }
+        ]
+      },
+      {
+        "$extends": "enableInput3",
+        "zwave": {
+          "index": 102,
+          "size": 1
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines whether input 3 is enabled and which message should be send to Homey and other associated devices when switched. If input 3 is enabled parameter 13 must be set to influence heating and cooling according to the flood sensor. Note: it is generally advised to leave this parameter unchanged, when changed the device needs te be removed from Homey and re-added after waiting 30 seconds (do not reset the device when removing).",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of ingang 3 is ingeschakeld en welk bericht moet worden verstuurd naar Homey en andere geassocieerde apparaten wanneer geschakeld. Als ingang 3 is ingeschakeld moet parameter 13 zijn ingesteld op het beïnvloeden van het verwarmen en verkoelen a.d.h.v. de aangesloten overstromingssensor. Let op: over het algemeen is het geadviseerd om deze parameter ongewijzigd te laten, na het aanpassen van deze parameter moet het apparaat van Homey worden verwijderd en opnieuw worden toegevoegd na 30 seconden wachten (zet het apparaat niet terug naar fabrieksinstellingen tijdens het verwijderen)."
+        },
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Disabled",
+              "nl": "Uitgeschakeld"
+            }
+          },
+          {
+            "id": "9",
+            "label": {
+              "en": "Sensor binary report",
+              "nl": "Binaire sensor melding"
+            }
+          }
+        ]
+      },
+      {
+        "$extends": "statusOnDelayInput1"
+      },
+      {
+        "$extends": "statusOffDelayInput1"
+      },
+      {
+        "$extends": "statusOnDelayInput2"
+      },
+      {
+        "$extends": "statusOffDelayInput2"
+      },
+      {
+        "$extends": "statusOnDelayInput3"
+      },
+      {
+        "$extends": "statusOffDelayInput3"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Temperature",
+      "nl": "Temperatuur"
+    },
+    "children": [
+      {
+        "$extends": "thermostatMode"
+      },
+      {
+        "$extends": "antifreezeEnabled"
+      },
+      {
+        "$extends": "antifreeze",
+        "zwave": {
+          "index": 45,
+          "size": 2
+        },
+        "attr": {
+          "min": -12.6,
+          "max": 12.5,
+          "step": 0.1
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) defines the temperature below which the heating will be turned on (to prevent freezing) even if the thermostat was manually set to off. Note: antifreeze is only activated when Heating thermostat mode is selected and uses a hysteresis of ±0.5°C.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de temperatuur waaronder de verwarming wordt ingeschakeld (vorstbeveiliging) zelfs als de thermostaat handmatig op uit is ingesteld. Let op: vorstbeveiliging is alleen geactiveerd wanneer de thermostaat modus Verwarmen is geselecteerd en gebruikt een hysteresis ±0.5°C."
+        }
+      },
+      {
+        "$extends": "tooLowTemperatureLimit",
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the temperature value below which the temperature is considered too low. Note: too low temperature limit is used by association group 4.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de waarde waaronder de temperatuur als te laag wordt beschouwd. Let op: te lage temperatuur limiet wordt gebruikt door associatiegroep 4."
+        },
+        "attr": {
+          "min": -15,
+          "max": 100,
+          "step": 0.1
+        }
+      },
+      {
+        "$extends": "tooHighTemperatureLimit",
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the temperature value above which the temperature is considered too high. Note: too high temperature limit is used by association group 4.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de waarde waarboven de temperatuur als te hoog wordt beschouwd. Let op: te hoge temperatuur limiet wordt gebruikt door associatiegroep 4."
+        }
+      },
+      {
+        "$extends": "temperatureScale"
+      },
+      {
+        "$extends": "temperatureSensorOffset",
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the value (°C) that will be added to the measured temperature value for the sake of calibration. Note: when parameter 78 is set to use Fahrenheit this parameter must still be set as Celsius.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de waarde (°C) die bij de gemeten temperatuur waarde wordt opgeteld om hem te kalibreren. Let op: wanneer parameter 78 is ingesteld op Fahrenheit moet deze parameter alsnog als Celsius worden ingesteld."
+        }
+      },
+      {
+        "$extends": "temperatureSensorReportingThreshold",
+        "hint": {
+          "en": "This parameter (120) defines the threshold (°C) which when exceeded will result in a temperature report being send to Homey. Note: setting this parameter to zero disables temperature reports completely. Note: when parameter 78 is set to use Fahrenheit this parameter must still be set as Celsius.",
+          "nl": "Deze parameter (120) bepaalt de verandering (°C) die overschreden moet worden voordat een temperatuur report wordt verstuurd naar Homey. Let op: het instellen van deze parameter op nul schakelt temperatuur reports volledig uit. Let op: wanneer parameter 78 is ingesteld op Fahrenheit moet deze parameter alsnog als Celsius worden ingesteld."
+        }
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Power reporting",
+      "nl": "Stroomverbruik"
+    },
+    "children": [
+      {
+        "$extends": "powerReportingThreshold",
+        "value": 0
+      },
+      {
+        "$extends": "powerReportingInterval",
+        "attr": {
+          "min": 0,
+          "max": 32767
+        }
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "PID",
+      "nl": "PID"
+    },
+    "children": [
+      {
+        "id": "pidValueInsideDeadband",
+        "type": "dropdown",
+        "label": {
+          "en": "PID value inside deadband",
+          "nl": "PID waarde in deadband"
+        },
+        "zwave": {
+          "index": 53,
+          "size": 1
+        },
+        "value": "0",
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "PID value equals PWM minimum value",
+              "nl": "PID waarde gelijk aan minimale waarde PWM"
+            }
+          },
+          {
+           "id": "1",
+            "label": {
+              "en": "PID value set to last value",
+              "nl": "PID waarde ingesteld op laatste waarde"
+            }
+          }
+        ],
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines de PID value inside deadband. Note: when the value is set to 'equals PWM minimum value' the PID inside deadband is forced to PWM minimum value, 'last value' means that PID remains on the same level as it was before entering into deadband.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de PID waarde in de deadband. Let op: wanneer de waarde is ingesteld op 'gelijk aan minimale waarde PWM' wordt de PID waarde in de deadband geforceerd op de minimale PWM waarde, 'laatste waarde' betekent dat de PID waarde blijft staan op de waarde die hij had voordat hij de deadband in ging."
+        }
+      },
+      {
+        "id": "pidDeadband",
+        "type": "number",
+        "label": {
+          "en": "PID deadband",
+          "nl": "PID deadband"
+        },
+        "units": {
+          "en": "°C",
+          "nl": "°C"
+        },
+        "zwave": {
+          "index": 54,
+          "size": 1
+        },
+        "value": 0.5,
+        "attr": {
+          "min": 0.0,
+          "max": 12.7,
+          "step": 0.1
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) defines the zone where PID is not active, if the temperature difference between actual and setpoint is bigger than PID deadband, then the PID will start to regulate the system, otherwise the PID is zero or fixed.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) definieert de zone waar PID niet actief is, als het temperatuursverschil tussen de gemeten temperatuur en de doel temperatuur groter is dan de PID deadband zal de PID het systeem beginnen te reguleren, anders is de PID nul of vastgezet."
+        }
+      },
+      {
+        "$extends": "integralSamplingTime"
+      },
+      {
+        "$extends": "pParameter"
+      },
+      {
+        "$extends": "iParameter"
+      },
+      {
+        "$extends": "dParameter"
+      }
+    ]
+  }
+]

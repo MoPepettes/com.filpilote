@@ -1,0 +1,327 @@
+[
+  {
+    "$extends": "allOn"
+  },
+  {
+    "$extends": "allOff"
+  },
+  {
+    "$extends": ["relayType", "relayTypeQ1"],
+    "zwave": {
+      "index": 64,
+      "size": 1
+    }
+  },
+  {
+    "$extends": ["relayType", "relayTypeQ2"],
+    "zwave": {
+      "index": 65,
+      "size": 1
+    }
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Inputs",
+      "nl": "Ingangen"
+    },
+    "children": [
+      {
+        "$extends": "switchTypeInput1"
+      },
+      {
+        "$extends": "switchTypeInput2"
+      },
+      {
+        "$extends": "contactTypeInput2",
+        "zwave": {
+          "index": 4,
+          "size": 1
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) defines the contact type of input 2. Note: this parameter is only active when parameter 11 is set to the value 2.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het contact type van ingang 2. Let op: deze parameter is alleen actief wanneer parameter 11 is ingesteld op de waarde 2."
+        }
+      },
+      {
+        "$extends": "contactTypeInput3",
+        "zwave": {
+          "index": 5,
+          "size": 1
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) defines the contact type of input 3. Note: this parameter is only active when parameter 12 is set to the value 2000.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het contact type van ingang 3. Let op: deze parameter is alleen actief wanneer parameter 12 is ingesteld op de waarde 200."
+        }
+      },
+      {
+        "$extends": "functionalityInput1"
+      },
+      {
+        "$extends": "functionalityInput2"
+      },
+      {
+        "$extends": "enableInput1",
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines whether input 1 is enabled and which message should be send to Homey and other associated devices when switched. If input 1 is enabled parameter 11 must be set to influence heating and cooling according to the window sensor status. Note: it is generally advised to leave this parameter unchanged, when changed the device needs te be removed from Homey and re-added after waiting 30 seconds (do not reset the device when removing).",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of ingang 1 is ingeschakeld en welk bericht moet worden verstuurd naar Homey en andere geassocieerde apparaten wanneer geschakeld. Als ingang 1 is ingeschakeld moet parameter 11 zijn ingesteld op het beïnvloeden van het verwarmen en verkoelen a.d.h.v. de aangesloten raamsensor. Let op: over het algemeen is het geadviseerd om deze parameter ongewijzigd te laten, na het aanpassen van deze parameter moet het apparaat van Homey worden verwijderd en opnieuw worden toegevoegd na 30 seconden wachten (zet het apparaat niet terug naar fabrieksinstellingen tijdens het verwijderen)."
+        }
+      },
+      {
+        "$extends": "enableInput2",
+        "zwave": {
+          "index": 101,
+          "size": 1
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines whether input 2 is enabled and which message should be send to Homey and other associated devices when switched. If input 2 is enabled parameter 12 must be set to influence heating and cooling according to the condense sensor. Note: it is generally advised to leave this parameter unchanged, when changed the device needs te be removed from Homey and re-added after waiting 30 seconds (do not reset the device when removing).",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of ingang 2 is ingeschakeld en welk bericht moet worden verstuurd naar Homey en andere geassocieerde apparaten wanneer geschakeld. Als ingang 2 is ingeschakeld moet parameter 12 zijn ingesteld op het beïnvloeden van het verwarmen en verkoelen a.d.h.v. de aangesloten condensatiesensor. Let op: over het algemeen is het geadviseerd om deze parameter ongewijzigd te laten, na het aanpassen van deze parameter moet het apparaat van Homey worden verwijderd en opnieuw worden toegevoegd na 30 seconden wachten (zet het apparaat niet terug naar fabrieksinstellingen tijdens het verwijderen)."
+        }
+      },
+      {
+        "$extends": "statusOnDelayInput1"
+      },
+      {
+        "$extends": "statusOffDelayInput1"
+      },
+      {
+        "$extends": "statusOnDelayInput2"
+      },
+      {
+        "$extends": "statusOffDelayInput2"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Temperature",
+      "nl": "Temperatuur"
+    },
+    "children": [
+      {
+        "$extends": "temperatureHysteresisOn",
+        "id": "temperatureHeatingHysteresisOn",
+        "zwave": {
+          "index": 43,
+          "size": 2
+        },
+        "value": -1,
+        "attr": {
+          "min": -12.7,
+          "max": 12.7,
+          "step": 0.1
+        },
+        "label": {
+          "en": "Temperature heating hysteresis on",
+          "nl": "Temperatuur verwarmen hysteresis aan"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) defines the temperature difference between the measured temperature and set point temperature which, when exceeded, will turn the heating on.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het temperatuurverschil tussen de gemeten temperatuur en de doeltemperatuur die, wanneer overschreden, het verwarmen start."
+        }
+      },
+      {
+        "$extends": "temperatureHysteresisOff",
+        "id": "temperatureHeatingHysteresisOff",
+        "zwave": {
+          "index": 44,
+          "size": 2
+        },
+        "value": 0.2,
+        "attr": {
+          "min": -12.7,
+          "max": 12.7,
+          "step": 0.1
+        },
+        "label": {
+          "en": "Temperature heating hysteresis off",
+          "nl": "Temperatuur verwarmen hysteresis uit"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) defines the temperature difference between the measured temperature and set point temperature which, when exceeded, will turn the heating off.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het temperatuurverschil tussen de gemeten temperatuur en de doeltemperatuur die, wanneer overschreden, het verwarmen stopt."
+        }
+      },
+      {
+        "$extends": "temperatureHysteresisOn",
+        "id": "temperatureCoolingHysteresisOn",
+        "zwave": {
+          "index": 45,
+          "size": 2
+        },
+        "value": 0.5,
+        "attr": {
+          "min": -12.7,
+          "max": 12.7,
+          "step": 0.1
+        },
+        "label": {
+          "en": "Temperature heating hysteresis on",
+          "nl": "Temperatuur verwarmen hysteresis aan"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) defines the temperature difference between the measured temperature and set point temperature which, when exceeded, will turn the cooling on.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het temperatuurverschil tussen de gemeten temperatuur en de doeltemperatuur die, wanneer overschreden, het verkoelen start."
+        }
+      },
+      {
+        "$extends": "temperatureHysteresisOff",
+        "id": "temperatureCoolingHysteresisOff",
+        "zwave": {
+          "index": 46,
+          "size": 2
+        },
+        "value": -0.2,
+        "attr": {
+          "min": -12.7,
+          "max": 12.7,
+          "step": 0.1
+        },
+        "label": {
+          "en": "Temperature heating hysteresis off",
+          "nl": "Temperatuur verwarmen hysteresis uit"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) defines the temperature difference between the measured temperature and set point temperature which, when exceeded, will turn the cooling off.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het temperatuurverschil tussen de gemeten temperatuur en de doeltemperatuur die, wanneer overschreden, het verkoelen stopt."
+        }
+      },
+      {
+        "$extends": "antifreezeEnabled"
+      },
+      {
+        "$extends": "antifreeze",
+        "zwave": {
+          "index": 47,
+          "size": 2
+        },
+        "attr": {
+          "min": -12.7,
+          "max": 12.7,
+          "step": 0.1
+        }
+      },
+      {
+        "$extends": "tooLowTemperatureLimit",
+        "attr": {
+          "min": -15,
+          "max": 100,
+          "step": 0.1
+        }
+      },
+      {
+        "$extends": "tooHighTemperatureLimit"
+      },
+      {
+        "$extends": "temperatureSensorOffset"
+      },
+      {
+        "$extends": "temperatureSensorReportingThreshold"
+      },
+      {
+        "id": "temperatureSensorSetpointSelector",
+        "type": "dropdown",
+        "label": {
+          "en": "Select temperature sensor",
+          "nl": "Selecteer temperatuursensor"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) enables the selection of an external temperature sensor. Note: if an external battery powered sensor is selected, its node id must be set in parameter 122 (see below).",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) faciliteert het selecteren van een externe temperatuursensor. Let op: als een externe temperatuursensor op batterijen is geselecteerd moet de node id van deze sensor in parameter 122 (zie hieronder) worden ingesteld."
+        },
+        "zwave": {
+          "index": 121,
+          "size": 1
+        },
+        "value": "0",
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Directly connected temperature sensor",
+              "nl": "Direct aangesloten temperatuursensor"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "External always on sensor measured temperature (\"sensor multilevel get\" on association group 3)",
+              "nl": "Externe altijd-aan sensor gemeten temperatuur (\"sensor multilevel get\" op associatie groep 3)"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "External battery powered sensor measured temperature",
+              "nl": "Externe sensor op batterijen gemeten temperatuur"
+            }
+          },
+          {
+            "id": "4",
+            "label": {
+              "en": "External always on device setpoint temperature (\"thermostat setpoint get\" on association group 5)",
+              "nl": "Extern altijd-aan apparaat doeltemperatuur (\"thermostat setpoint get\" op associatie groep 5)"
+            }
+          },
+          {
+            "id": "8",
+            "label": {
+              "en": "External battery powered sensor setpoint temperature",
+              "nl": "Externe sensor op batterijen doeltemperatuur"
+            }
+          },
+          {
+            "id": "10",
+            "label": {
+              "en": "External battery powered sensor setpoint and measured temperature",
+              "nl": "Externe sensor op batterijen doel- en gemetentemperatuur"
+            }
+          }
+        ]
+      },
+      {
+        "id": "externalTemperatureSensorNodeId",
+        "type": "number",
+        "label": {
+          "en": "External temperature sensor node id",
+          "nl": "Externe temperatuursensor node id"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) specifies the node id of the external battery powered temperature sensor. Note: this parameter is only relevant if parameter 121 is set to use an external battery powered temperature sensor. It is important to set this parameter immediately after the external battery sensor wakes up, this has to be done according to the external battery powered sensor manual.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) specificeert de node id van de externe temperatuursensor op batterijen. Let op: deze parameter is allen relevant wanneer parameter 121 is ingesteld op het gebruik van een externe temperatuursensor op batterijen. Het is belangrijk dat deze parameter wordt ingesteld direct nadat de externe temperatuursensor op batterijen wakker wordt, voor specifieke instructies zie de handleiding van de externe temperatuursensor op batterijen."
+        },
+        "zwave": {
+          "index": 122,
+          "size": 1,
+          "signed": false
+        },
+        "value": 0,
+        "attr": {
+          "min": 0,
+          "max": 254
+        }
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Power reporting",
+      "nl": "Stroomverbruik"
+    },
+    "children": [
+      {
+        "$extends": "powerReportingThreshold",
+        "value": 0
+      },
+      {
+        "$extends": "powerReportingInterval",
+        "attr": {
+          "min": 0,
+          "max": 32767
+        }
+      }
+    ]
+  }
+]
