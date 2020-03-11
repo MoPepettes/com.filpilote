@@ -1,0 +1,51 @@
+{
+  "id": "ZMNHWD",
+  "name": {
+    "en": "Flush RGBW Dimmer (ZMNHWD)"
+  },
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "class": "light",
+  "capabilities": [
+    "onoff",
+    "dim",
+    "light_hue",
+    "light_saturation",
+    "light_temperature",
+    "light_mode"
+  ],
+  "capabilitiesOptions": {
+    "onoff": {
+      "setOnDim": false
+    },
+    "dim": {
+      "opts": {
+        "duration": true
+      }
+    }
+  },
+  "zwave": {
+    "manufacturerId": 345,
+    "productTypeId": 1,
+    "productId": 84,
+    "associationGroups": [
+      1
+    ],
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Enable inclusion mode on the {{driverNameEn}} via one of the following methods:\n\n1. Connect the device to the power supply and wait 5 seconds for auto-inclusion to start.\n\n2. Press the S (Service) button 3 times within 2 seconds.",
+        "nl": "Activeer inclusie modus op de {{driverNameNl}} via een van de volgende methoden:\n\n1. Verbind het apparaat met de stroomvoorziening en wacht 5 seconden tot auto-inclusie start.\n\n2. Druk 3 keer binnen 2 seconden op de S (Service) knop."
+      }
+    },
+    "unlearnmode": {
+      "instruction": {
+        "en": "Enable exclusion mode on the {{driverNameEn}} by pressing the S (Service) button 3 times within 2 seconds. After exclusion the device will attempt to re-include in the next 2 minutes.\n\nNote: holding the S button longer than 10 seconds will reset the device completely.",
+        "nl": "Activeer exclusie modus op de {{driverNameNl}} door 3 keer binnen 2 seconden op de S (Service) knop te drukken. Na exclusie probeert het apparaat 2 minuten lang automatisch opnieuw te includen.\n\nLet op: wanneer de S knop langer dan 10 seconden wordt ingehouden wordt het apparaat teruggezet naar fabrieksinstellingen."
+      },
+      "image": "{{driverAssetsPath}}/learnmode.svg"
+    }
+  }
+}

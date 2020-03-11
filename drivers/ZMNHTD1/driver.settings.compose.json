@@ -1,0 +1,327 @@
+[
+  {
+    "$extends": [
+      "autoOff",
+      "autoOffQ1"
+    ],
+    "label": {
+      "en": "Turn off IR external relay automatically",
+      "nl": "Schakel extern IR relais automatisch uit"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) defines the time after which the IR external relay is turned off automatically. Note: setting this parameter to zero will disable automatically turning off.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de tijd waarna het externe IR relais automatisch wordt uitgezet. Let op: het instellen van deze parameter op nul schakelt het automatisch uit gaan uit."
+    }
+  },
+  {
+    "$extends": [
+      "autoOn",
+      "autoOnQ1"
+    ],
+    "label": {
+      "en": "Turn on IR external relay automatically",
+      "nl": "Schakel extern IR relais automatisch in"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) defines the time after which the IR external relay is turned on automatically. Note: setting this parameter to zero will disable automatically turning on.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de tijd waarna het externe IR relais automatisch wordt aangezet. Let op: het instellen van deze parameter op nul schakelt het automatisch aan gaan uit."
+    }
+  },
+  {
+    "$extends": [
+      "autoOff",
+      "autoOffQ2"
+    ],
+    "label": {
+      "en": "Turn off external relay automatically",
+      "nl": "Schakel extern relais automatisch uit"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) defines the time after which the external relay is turned off automatically. Note: setting this parameter to zero will disable automatically turning off.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de tijd waarna het externe relais automatisch wordt uitgezet. Let op: het instellen van deze parameter op nul schakelt het automatisch uit gaan uit."
+    }
+  },
+  {
+    "$extends": [
+      "autoOn",
+      "autoOnQ2"
+    ],
+    "label": {
+      "en": "Turn on external relay automatically",
+      "nl": "Schakel extern relais automatisch in"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) defines the time after which the external relay is turned on automatically. Note: setting this parameter to zero will disable automatically turning on.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de tijd waarna het externe relais automatisch wordt aangezet. Let op: het instellen van deze parameter op nul schakelt het automatisch aan gaan uit."
+    }
+  },
+  {
+    "id": "relayAutoOffSelect",
+    "type": "dropdown",
+    "label": {
+      "en": "Select relay for auto-off",
+      "nl": "Selecteer relais voor automatisch uitschakelen"
+    },
+    "zwave": {
+      "index": 112,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Switch between both relays",
+          "nl": "Wissel tussen beide relais"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "IR external relay",
+          "nl": "Externe IR relais"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "External relay",
+          "nl": "Externe relais"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Both relays",
+          "nl": "Beide relais"
+        }
+      }
+    ],
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines which relay should be powered off when the threshold is reached (defined in parameter 110). Note: when switching between both relays is selected, IR external relay will be turned off, if after restart of this relay power consumption is still to high it will turn off the external relay.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welk relais uitgeschakeld moet worden wanneer de drempelwaarde is bereikt (gedefinieerd in parameter 110). Let op: wanneer wisselen tussen beide relais is geselecteerd zal het externe IR relais worden uitgeschakeld, als na de restart van dit relais het stroomverbruik nog steeds te hoog is zal het externe relais worden uitgeschakeld."
+    }
+  },
+  {
+    "id": "relayPowerOffThreshold",
+    "type": "number",
+    "label": {
+      "en": "Relay auto-off threshold",
+      "nl": "Relais automatisch uitschakelen drempelwaarde"
+    },
+    "units": {
+      "en": "W",
+      "nl": "W"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the threshold value that will turn the selected relay off when exceeded.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de drempelwaarde die ervoor zorgt dat het geselecteerde relais wordt uitgeschakeld wanneer overschreden."
+    },
+    "zwave": {
+      "index": 110,
+      "size": 2
+    },
+    "value": 0,
+    "attr": {
+      "min": 0,
+      "max": 15000
+    }
+  },
+  {
+    "id": "delayPowerOff",
+    "type": "number",
+    "label": {
+      "en": "Delay auto-off relay",
+      "nl": "Vertraging relais automatisch uit"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) specifies the delay which occurs before the relay is restarted after being powered off due to exceeding the threshold (defined in parameter 110).",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de vertraging die optreedt voordat het relais opnieuw wordt gestart nadat het is uitgeschakeld door het overschrijden van de drempelwaarde (gedefinieerd in parameter 110)."
+    },
+    "units": {
+      "en": "s",
+      "nl": ""
+    },
+    "zwave": {
+      "index": 111,
+      "size": 2
+    },
+    "value": 30,
+    "attr": {
+      "min": 0,
+      "max": 32535
+    }
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Inputs",
+      "nl": "Ingangen"
+    },
+    "children": [
+      {
+        "$extends": "switchTypeInput1",
+        "zwave": {
+          "index": 7,
+          "size": 1
+        },
+        "value": "4",
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Disabled",
+              "nl": "Uitgeschakeld"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "Controls IR external relay (momentary switch)",
+              "nl": "Stuurt extern IR relais aan (pulsdrukschakelaar)"
+            }
+          },
+          {
+            "id": "3",
+            "label": {
+              "en": "Controls IR external relay (toggle switch)",
+              "nl": "Stuurt extern IR relais aan (tuimelschakelaar)"
+            }
+          },
+          {
+            "id": "4",
+            "label": {
+              "en": "Controls external relay (momentary switch)",
+              "nl": "Stuurt extern relais aan (pulsdrukschakelaar)"
+            }
+          },
+          {
+            "id": "5",
+            "label": {
+              "en": "Controls external relay (toggle switch)",
+              "nl": "Stuurt extern relais aan (tuimelschakelaar)"
+            }
+          }
+        ]
+      },
+      {
+        "$extends": "enableInput1",
+        "label": {
+          "en": "Enable external relays",
+          "nl": "Schakel externe relais in"
+        },
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Disabled",
+              "nl": "Uitgeschakeld"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "IR relay disabled, external relay enabled",
+              "nl": "IR relais uitgeschakeld, externe relais ingeschakeld"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "IR relay enabled, external relay disabled",
+              "nl": "IR relais ingeschakeld, externe relais uitgeschakeld"
+            }
+          },
+          {
+            "id": "3",
+            "label": {
+              "en": "IR relay and external relay enabled",
+              "nl": "IR relais en externe relais ingeschakeld"
+            }
+          }
+        ],
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines whether the external relay or external IR relay are enabled. Note: it is generally advised to leave this parameter unchanged, when changed the device needs te be removed from Homey and re-added after waiting 30 seconds (do not reset the device when removing).",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of de externe relais of externe IR relais zijn ingeschakeld. Let op: over het algemeen is het geadviseerd om deze parameter ongewijzigd te laten, na het aanpassen van deze parameter moet het apparaat van Homey worden verwijderd en opnieuw worden toegevoegd na 30 seconden wachten (zet het apparaat niet terug naar fabrieksinstellingen tijdens het verwijderen)."
+        }
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Power reporting",
+      "nl": "Stroomverbruik"
+    },
+    "children": [
+      {
+        "$extends": "powerReportingThreshold",
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) defines the relative threshold (percentage) which when exceeded will result in a Watt power consumption report being send to Homey. Note: power consumption needs to change by at least 1 Watt before it can be reported, when a Watt report is sent it will also send Voltage, Amperes, Power Factor and Reactive Power reports.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de relatieve verandering (in procenten) die overschreden moet worden voordat een Watt stroom consumptie report wordt verstuurd naar Homey. Let op: stroom consumptie report kan pas worden verstuurd nadat de waarde met minimaal 1 Watt is veranderd, waneer een Watt report wordt verstuurd zullen ook Voltage, Ampère, Power Factor en Reactief Vermogen worden gerapporteerd."
+        }
+      },
+      {
+        "$extends": "powerReportingInterval",
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) defines the interval in seconds with which the power consumption in Watts is reported to Homey. Note: setting this parameter to zero disables reporting based on intervals completely, when a Watt report is sent it will also send Voltage, Amperes, Power Factor and Reactive Power reports.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt op welk interval (in seconden) een stroomverbruik update moet worden verstuurd naar Homey. Let op: het instellen van deze parameter op nul schakelt reports per tijdsinterval volledig uit, waneer een Watt report wordt verstuurd zullen ook Voltage, Ampère, Power Factor en Reactief Vermogen worden gerapporteerd."
+        }
+      },
+      {
+        "id": "resetPowerCounters",
+        "type": "dropdown",
+        "label": {
+          "en": "Select meter reset values",
+          "nl": "Selecteer waarden voor stel opnieuw in"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines which power meter should be reset when a \"reset power meter\" command is sent to the device.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welke stroomverbruik waarden opnieuw ingesteld moeten worden wanneer \"stel stroomverbuik opnieuw in\" commando is ontvangen."
+        },
+        "zwave": {
+          "index": 45,
+          "size": 1
+        },
+        "value": "0",
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "None",
+              "nl": "Geen"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "Power meter (kWh)",
+              "nl": "Stroomverbruik (kWh)"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "Total Reactive Power (kVarh)",
+              "nl": "Totale Reactief Vermogen (kVarh)"
+            }
+          },
+          {
+            "id": "4",
+            "label": {
+              "en": "Total Apparent Power (kVAh)",
+              "nl": "Totale Schijnbare Vermogen (kVAh)"
+            }
+          },
+          {
+            "id": "15",
+            "label": {
+              "en": "All",
+              "nl": "Alles"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

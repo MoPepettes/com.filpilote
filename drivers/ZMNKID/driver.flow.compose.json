@@ -1,0 +1,15 @@
+{
+  "triggers": [
+    {
+      "$extends": "offAutoThermostatModeChanged"
+    }
+  ],
+  "actions": [
+    {
+      "$extends": "resetMeter"
+    },
+    {
+      "$extends": "setOffAutoThermostatMode"
+    }
+  ]
+}

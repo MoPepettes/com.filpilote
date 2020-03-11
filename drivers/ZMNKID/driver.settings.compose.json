@@ -1,0 +1,156 @@
+[
+  {
+    "$extends": "relayType"
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Inputs",
+      "nl": "Ingangen"
+    },
+    "children": [
+      {
+        "$extends": "switchTypeInput1",
+        "value": "1"
+      },
+      {
+        "$extends": "contactTypeInput1"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Temperature",
+      "nl": "Temperatuur"
+    },
+    "children": [
+      {
+        "$extends": "thermostatMode"
+      },
+      {
+        "$extends": "temperatureHysteresisOn",
+        "label": {
+          "en": "Hysteresis upper temperature offset",
+          "nl": "Hysteresis bovengrens temperatuur offset"
+        },
+        "zwave": {
+          "index": 43,
+          "size": 2
+        },
+        "value": 0.5,
+        "attr": {
+          "min": 0,
+          "max": 25,
+          "step": 0.1
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) defines the temperature difference between the measured temperature and set point temperature which, when exceeded, will turn the device on in heat mode and off in cool mode.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het temperatuurverschil tussen de gemeten temperatuur en de doeltemperatuur die, wanneer overschreden, het apparaat aanzet in \"verwarmen\" modus en uitzet in \"koelen\" modus."
+        }
+      },
+      {
+        "$extends": "temperatureHysteresisOff",
+        "label": {
+          "en": "Hysteresis lower temperature offset",
+          "nl": "Hysteresis ondergrens temperatuur offset"
+        },
+        "zwave": {
+          "index": 44,
+          "size": 2
+        },
+        "value": 0.5,
+        "attr": {
+          "min": 0,
+          "max": 25,
+          "step": 0.1
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) defines the temperature difference between the measured temperature and set point temperature which, when exceeded, will turn the device off in heat mode and on in cool mode.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het temperatuurverschil tussen de gemeten temperatuur en de doeltemperatuur die, wanneer overschreden, het apparaat uitzet in \"verwarmen\", modus en uitzet in \"koelen\" modus."
+        }
+      },
+      {
+        "$extends": "antifreezeEnabled"
+      },
+      {
+        "$extends": "antifreeze",
+        "zwave": {
+          "index": 45,
+          "size": 2
+        },
+        "attr": {
+          "min": -12.5,
+          "max": 54.5
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) defines the temperature below which the heating will be turned on (to prevent freezing) even if the thermostat was manually set to off. Note: antifreeze is only activated when heating mode is selected and uses a hysteresis of ±0.5°C.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de temperatuur waaronder de verwarming wordt ingeschakeld (vorstbeveiliging) zelfs als de thermostaat handmatig op uit is ingesteld. Let op: vorstbeveiliging is alleen geactiveerd wanneer de thermostaat modus \"verwarmen\" is geselecteerd en gebruikt een hysteresis ±0.5°C."
+        }
+      },
+      {
+        "$extends": "tooLowTemperatureLimit",
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the temperature value below which the temperature is considered too low. Note: too low temperature limit is used by association group 3.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de waarde waaronder de temperatuur als te laag wordt beschouwd. Let op: te lage temperatuur limiet wordt gebruikt door associatiegroep 3."
+        },
+        "attr": {
+          "min": -15,
+          "max": 100,
+          "step": 0.1
+        }
+      },
+      {
+        "$extends": "tooHighTemperatureLimit",
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the temperature value above which the temperature is considered too high. Note: too high temperature limit is used by association group 3.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de waarde waarboven de temperatuur als te hoog wordt beschouwd. Let op: te hoge temperatuur limiet wordt gebruikt door associatiegroep 3."
+        }
+      },
+      {
+        "$extends": "temperatureSensorOffset",
+        "attr": {
+          "min": -15,
+          "max": 15,
+          "step": 0.1
+        }
+      },
+      {
+        "$extends": "temperatureSensorReportingThreshold",
+        "zwave": {
+          "index": 120,
+          "size": 2
+        },
+        "attr": {
+          "min": 0,
+          "max": 15,
+          "step": 0.1
+        },
+        "hint": {
+          "en": "This parameter (120) defines the threshold (°C) which when exceeded will result in a temperature report being send to association group 4. Note: setting this parameter to zero disables temperature reports completely.",
+          "nl": "Deze parameter (120) bepaalt de verandering (°C) die overschreden moet worden voordat een temperatuur report wordt verstuurd naar associatiegroep 4. Let op: het instellen van deze parameter op nul schakelt temperatuur reports volledig uit."
+        }
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Power reporting",
+      "nl": "Stroomverbruik"
+    },
+    "children": [
+      {
+        "$extends": "powerReportingThreshold"
+      },
+      {
+        "$extends": "powerReportingInterval",
+        "value": 600,
+        "attr": {
+          "min": 0,
+          "max": 32767
+        }
+      }
+    ]
+  }
+]

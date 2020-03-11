@@ -1,0 +1,201 @@
+[
+  {
+    "$extends": "allOn"
+  },
+  {
+    "$extends": "allOff"
+  },
+  {
+    "$extends": "autoOff"
+  },
+  {
+    "$extends": "autoOn"
+  },
+  {
+    "$extends": "restoreStatus"
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Inputs",
+      "nl": "Ingangen"
+    },
+    "children": [
+      {
+        "$extends": "switchTypeInput1",
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Momentary switch",
+              "nl": "Pulsdrukschakelaar"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "Toggle switch",
+              "nl": "Tuimelschakelaar"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "Potentiometer",
+              "nl": "Potentiometer"
+            }
+          },
+          {
+            "id": "3",
+            "label": {
+              "en": "0-10V Temperature sensor",
+              "nl": "0-10V Temperatuur sensor"
+            }
+          },
+          {
+            "id": "4",
+            "label": {
+              "en": "0-10V Illumination sensor",
+              "nl": "0-10V Lichtsterkte sensor"
+            }
+          },
+          {
+            "id": "5",
+            "label": {
+              "en": "0-10V General propose sensor",
+              "nl": "0-10V Algemene sensor"
+            }
+          }
+        ],
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the type of switch connected to input 1 of the {{driverNameEn}}. When this parameter is changed, the device needs to be removed from Homey and re-added after waiting 30 seconds (do not reset the device when removing).",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) specificeert het type schakelaar dat is aangesloten op ingang 1 van de {{driverNameNl}}. Na het aanpassen van deze parameter moet het apparaat van Homey worden verwijderd en opnieuw worden toegevoegd na 30 seconden wachten (zet het apparaat niet terug naar fabrieksinstellingen tijdens het verwijderen)."
+        }
+      },
+      {
+        "$extends": "doubleClick"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Dimming",
+      "nl": "Dimmen"
+    },
+    "children": [
+      {
+        "$extends": "minimumDimValue"
+      },
+      {
+        "$extends": "maximumDimValue"
+      },
+      {
+        "$extends": "dimDuration"
+      },
+      {
+        "$extends": "dimDurationKeyPressed"
+      },
+      {
+        "$extends": "ignoreStartLevel"
+      },
+      {
+        "$extends": "dimDurationAssociated"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Temperature reporting",
+      "nl": "Temperatuur metingen"
+    },
+    "children": [
+      {
+        "$extends": "temperatureSensorOffset"
+      },
+      {
+        "$extends": "temperatureSensorReportingThreshold"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "PID",
+      "nl": "PID"
+    },
+    "children": [
+      {
+        "id": "pidValueInsideDeadband",
+        "type": "dropdown",
+        "label": {
+          "en": "PID value inside deadband",
+          "nl": "PID waarde in deadband"
+        },
+        "zwave": {
+          "index": 53,
+          "size": 1
+        },
+        "value": "0",
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "PID value equals zero",
+              "nl": "PID waarde gelijk aan nul"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "PID value set to last value",
+              "nl": "PID waarde ingesteld op laatste waarde"
+            }
+          }
+        ],
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines de PID value inside deadband. Note: when the value is set to 'equals zero' the PID inside deadband is forced to zero, 'last value' means that PID remains on the same level as it was before entering into deadband.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de PID waarde in de deadband. Let op: wanneer de waarde is ingesteld op 'gelijk aan nul' wordt de PID waarde in de deadband geforceerd op nul, 'laatste waarde' betekent dat de PID waarde blijft staan op de waarde die hij had voordat hij de deadband in ging."
+        }
+      },
+      {
+        "id": "pidDeadband",
+        "type": "number",
+        "label": {
+          "en": "PID deadband",
+          "nl": "PID deadband"
+        },
+        "units": {
+          "en": "%",
+          "nl": "%"
+        },
+        "zwave": {
+          "index": 54,
+          "size": 1
+        },
+        "value": 1,
+        "attr": {
+          "min": 0,
+          "max": 100
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) defines the zone where PID is not active, if the temperature difference between actual and setpoint is bigger than PID deadband, then the PID will start to regulate the system, otherwise the PID is zero or fixed.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) definieert de zone waar PID niet actief is, als het temperatuursverschil tussen de gemeten temperatuur en de doel temperatuur groter is dan de PID deadband zal de PID het systeem beginnen te reguleren, anders is de PID nul of vastgezet."
+        }
+      },
+      {
+        "$extends": "integralSamplingTime"
+      },
+      {
+        "$extends": "pParameter"
+      },
+      {
+        "$extends": "iParameter"
+      },
+      {
+        "$extends": "dParameter"
+      }
+    ]
+  }
+]

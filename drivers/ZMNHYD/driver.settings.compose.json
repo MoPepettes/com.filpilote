@@ -1,0 +1,178 @@
+[
+  {
+    "$extends": "autoOff"
+  },
+  {
+    "$extends": "autoOn"
+  },
+  {
+    "$extends": "restoreStatus"
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Power reporting",
+      "nl": "Stroomverbruik"
+    },
+    "children": [
+      {
+        "$extends": "powerReportingThreshold",
+        "value": 20,
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) defines the relative threshold (percentage) which when exceeded will result in a Watt power consumption report being send to Homey. Note: power consumption needs to change by at least 1 Watt before it can be reported, when a Watt report is sent it will also send Voltage and Amperes reports.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de relatieve verandering (in procenten) die overschreden moet worden voordat een Watt stroom consumptie report wordt verstuurd naar Homey. Let op: stroom consumptie report kan pas worden verstuurd nadat de waarde met minimaal 1 Watt is veranderd, waneer een Watt report wordt verstuurd zullen ook Voltage en Ampère worden gerapporteerd."
+        }
+      },
+      {
+        "$extends": "powerReportingInterval",
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) defines the interval in seconds with which the power consumption in Watts is reported to Homey. Note: setting this parameter to zero disables reporting based on intervals completely, when a Watt report is sent it will also send Voltage and Amperes reports.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt op welk interval (in seconden) een stroomverbruik update moet worden verstuurd naar Homey. Let op: het instellen van deze parameter op nul schakelt reports per tijdsinterval volledig uit, waneer een Watt report wordt verstuurd zullen ook Voltage en Ampère worden gerapporteerd."
+        }
+      },
+      {
+        "id": "powerDownValue",
+        "type": "number",
+        "label": {
+          "en": "Lower power threshold",
+          "nl": "Laag vermogen drempelwaarde"
+        },
+        "units": {
+          "en": "W",
+          "nl": "W"
+        },
+        "zwave": {
+          "index": 50,
+          "size": 2
+        },
+        "value": 30,
+        "attr": {
+          "min": 0,
+          "max": 4000
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) defines the lower power threshold used by parameter 52. Note: the lower power threshold can not be higher than the upper power threshold (parameter 51).",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de laag vermogen drempelwaarde die gebruikt wordt door parameter 52. Let op: de laag vermogen drempelwaarde mag niet hoger zijn dan de hoog vermogen drempelwaarde (parameter 51)."
+        }
+      },
+      {
+        "id": "powerUpValue",
+        "type": "number",
+        "label": {
+          "en": "Upper power threshold",
+          "nl": "Hoog vermogen drempelwaarde"
+        },
+        "units": {
+          "en": "W",
+          "nl": "W"
+        },
+        "zwave": {
+          "index": 51,
+          "size": 2
+        },
+        "value": 50,
+        "attr": {
+          "min": 0,
+          "max": 4000
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) defines the upper power threshold used by parameter 52. Note: the upper power threshold can not be lower than the lower power threshold (parameter 50).",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de hoog vermogen drempelwaarde die gebruikt wordt door parameter 52. Let op: de hoog vermogen drempelwaarde mag niet lager zijn dan de laag vermogen drempelwaarde (parameter 50)."
+        }
+      },
+      {
+        "id": "powerThresholdExceededAction",
+        "type": "dropdown",
+        "label": {
+          "en": "Exceeding power thresholds action",
+          "nl": "Overschrijden vermogen drempelwaarden actie"
+        },
+        "zwave": {
+          "index": 52,
+          "size": 1
+        },
+        "value": "6",
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "No action",
+              "nl": "Geen actie"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "Turn on once power drops below lower power threshold",
+              "nl": "Schakel in wanneer het vermogen onder de laag vermogen drempelwaarde komt"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "Turn off once power drops below lower power threshold",
+              "nl": "Schakel uit wanneer het vermogen onder de laag vermogen drempelwaarde komt"
+            }
+          },
+          {
+            "id": "3",
+            "label": {
+              "en": "Turn on once power rises above upper power threshold",
+              "nl": "Schakel in wanneer het vermogen boven de hoog vermogen drempelwaarde komt"
+            }
+          },
+          {
+            "id": "4",
+            "label": {
+              "en": "Turn off once power rises above upper power threshold",
+              "nl": "Schakel uit wanneer het vermogen boven de hoog vermogen drempelwaarde komt"
+            }
+          },
+          {
+            "id": "5",
+            "label": {
+              "en": "Turn on once power drops below lower power threshold and turn off once power rises above upper power threshold",
+              "nl": "Schakel uit wanneer het vermogen boven de hoog vermogen drempelwaarde komt en schakel uit wanneer het vermogen boven de hoog vermogen drempelwaarde komt"
+            }
+          },
+          {
+            "id": "6",
+            "label": {
+              "en": "Turn off once power drops below lower power threshold and turn on once power rises above upper power threshold",
+              "nl": "Schakel in wanneer het vermogen boven de hoog vermogen drempelwaarde komt en schakel in wanneer het vermogen boven de hoog vermogen drempelwaarde komt"
+            }
+          }
+        ],
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) defines the action that will be executed based on the lower and upper power thresholds, the action will be applied to all devices associated to association group 3.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de actie die wordt uitgevoerd op basis van de laag en hoog vermogen drempelwaarden, de actie wordt toegepast op de apparaten in associatie group 3."
+        }
+      },
+      {
+        "id": "overloadSafetySwitch",
+        "type": "number",
+        "label": {
+          "en": "Overload safety switch",
+          "nl": "Overbelasting beveiliging"
+        },
+        "units": {
+          "en": "W",
+          "nl": "W"
+        },
+        "zwave": {
+          "index": 70,
+          "size": 2
+        },
+        "value": 0,
+        "attr": {
+          "min": 0,
+          "max": 4000
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) defines the threshold of the overload safety switch which when exceeded for longer than 3.1 seconds will turn off the device.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de overbelasting beveiliging drempelwaarde die, wanneer overschreden voor langer dan 3,1 seconden, het apparaat zal uitschakelen.,"
+        }
+      }
+    ]
+  }
+]

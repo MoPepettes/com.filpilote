@@ -1,0 +1,232 @@
+[
+  {
+    "id": "autoSceneModeSet",
+    "type": "dropdown",
+    "zwave": {
+      "index": 5,
+      "size": 1
+    },
+    "label": {
+      "en": "Auto scene mode",
+      "nl": "Automatische scene modus"
+    },
+    "value": "1",
+    "values": [
+      {
+        "id": "1",
+        "label": {
+          "en": "Ocean",
+          "nl": "Oceaan"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Lightning",
+          "nl": "Bliksem"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Rainbow",
+          "nl": "Regenboog"
+        }
+      },
+      {
+        "id": "4",
+        "label": {
+          "en": "Snow",
+          "nl": "Sneeuw"
+        }
+      },
+      {
+        "id": "5",
+        "label": {
+          "en": "Romantic",
+          "nl": "Romantisch"
+        }
+      },
+      {
+        "id": "6",
+        "label": {
+          "en": "Party",
+          "nl": "Feestje"
+        }
+      }
+    ]
+  },
+  {
+    "id": "autoSceneModeTransitionDurationUnit",
+    "type": "dropdown",
+    "label": {
+      "en": "Color transition duration unit",
+      "nl": "Vertraging tussen kleur verandering eenheid"
+    },
+    "hint": {
+      "en": "This setting determines the time unit used by the \"Color transition duration\" setting.",
+      "nl": "Deze instelling bepaalt de tijdseenheid die wordt gebruikt door de \"Vertraging tussen kleur verandering\" instelling.."
+    },
+    "value": "sec",
+    "values": [
+      {
+        "id": "sec",
+        "label": {
+          "en": "seconds",
+          "nl": "seconden"
+        }
+      },
+      {
+        "id": "min",
+        "label": {
+          "en": "minutes",
+          "nl": "minuten"
+        }
+      }
+    ]
+  },
+  {
+    "id": "autoSceneModeTransitionDuration",
+    "type": "number",
+    "label": {
+      "en": "Color transition duration",
+      "nl": "Vertraging tussen kleur verandering"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the time between consecutive color changes. Note: the unit of this parameter is defined by the setting above, this parameter has no effect on the lighting and party scenes.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de tijd tussen opeenvolgende kleur veranderingen. Let op: de tijdseenheid van deze parameter wordt bepaalt door de instelling hierboven, deze parameter heeft geen effect op de bliksem en feest scenes."
+    },
+    "zwave": {
+      "index": 6,
+      "size": 2
+    },
+    "attr": {
+      "min": 1,
+      "max": 127
+    },
+    "value": 3
+  },
+  {
+    "$extends": "restoreStatus",
+    "value": false,
+    "zwave": {
+      "index": 7,
+      "size": 1
+    }
+  },
+  {
+    "$extends": "autoOff",
+    "zwave": {
+      "index": 8,
+      "size": 2
+    }
+  },
+  {
+    "$extends": "autoOn",
+    "zwave": {
+      "index": 9,
+      "size": 2
+    }
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Inputs",
+      "nl": "Ingangen"
+    },
+    "children": [
+      {
+        "$extends": "configurationInputRGBW",
+        "id": "configurationInput1",
+        "label": {
+          "en": "Input 1 configuration",
+          "nl": "Ingang 1 configuratie"
+        }
+      },
+      {
+        "$extends": "configurationInputRGBW",
+        "id": "configurationInput2",
+        "zwave": {
+          "index": 2,
+          "size": 1
+        },
+        "label": {
+          "en": "Input 2 configuration",
+          "nl": "Ingang 2 configuratie"
+        },
+        "value": "7"
+      },
+      {
+        "$extends": "configurationInputRGBW",
+        "id": "configurationInput3",
+        "zwave": {
+          "index": 3,
+          "size": 1
+        },
+        "label": {
+          "en": "Input 3 configuration",
+          "nl": "Ingang 3 configuratie"
+        },
+        "value": "8"
+      },
+      {
+        "$extends": "configurationInputRGBW",
+        "id": "configurationInput4",
+        "zwave": {
+          "index": 4,
+          "size": 1
+        },
+        "label": {
+          "en": "Input 4 configuration",
+          "nl": "Ingang 4 configuratie"
+        },
+        "value": "1"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Dimming",
+      "nl": "Dimmen"
+    },
+    "children": [
+      {
+        "$extends": "maximumDimValue",
+        "zwave": {
+          "index": 10,
+          "size": 1
+        }
+      },
+      {
+        "$extends": "minimumDimValue",
+        "zwave": {
+          "index": 11,
+          "size": 1
+        }
+      },
+      {
+        "$extends": "dimDuration",
+        "zwave": {
+          "index": 12,
+          "size": 1
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the time (in seconds) it takes to move between the maximum and minimum dim values.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de tijd (in seconden) die nodig is voor het dimmen van het maximale naar het minimale dim niveau."
+        }
+      },
+      {
+        "$extends": "dimDurationKeyPressed",
+        "zwave": {
+          "index": 13,
+          "size": 1
+        },
+        "attr": {
+          "min": 1,
+          "max": 127
+        }
+      }
+    ]
+  }
+]
