@@ -1,0 +1,27 @@
+{
+  "name": "com.qubino",
+  "version": "1.0.0",
+  "description": "This app adds support for the following Qubino devices in Homey:",
+  "main": "app.js",
+  "dependencies": {
+    "homey-log": "^1.0.6",
+    "homey-meshdriver": "^1.3.21"
+  },
+  "scripts": {
+    "run": "homeyConfig compose && athom project --run",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/athombv/com.qubino.git"
+  },
+  "engines": {
+    "node": ">=8.16.0"
+  },
+  "author": "Athom B.V.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/athombv/com.qubino/issues"
+  },
+  "homepage": "https://github.com/athombv/com.qubino#readme"
+}

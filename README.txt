@@ -1,0 +1,1 @@
+With the products of Qubino you can remotely control your shading, lightning, energy meters and other household appliances. Qubino adds support for Z-Wave smart home devices. Connect with Homey and create Flows to make your life easier. 

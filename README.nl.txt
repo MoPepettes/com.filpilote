@@ -1,0 +1,1 @@
+Met de modules van Qubino breid je je bestaande slimme apparaten uit op basis van het Z-Wave protocol. De Qubino productlijn bestaat uit slimme dimmers, schakelaars, rolluikschakelaars en thermostaten. 
